@@ -9,33 +9,22 @@ import "./layout.css"
 import FooterDesktop from "./footer/footer-desktop"
 
 const StyledLayout = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  width: 100%;
 `
 
-const FixedProduct = styled.div`
-  position: fixed;
-  top: 25vh;
-  width: 40%;
-  margin-left: 5%;
-`
-
-const StyledRight = styled.div`
+const StyledBody = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  margin-top: 2rem;
+  /* justify-items: center; */
+  /* width: 70%; */
+  margin: 36px 15vw;
 `
 
 const LayoutDesktop = ({ children }) => {
   return (
     <StyledLayout>
       <HeaderDesktop />
-      <FixedProduct>
-        <Product width="50vh" height="30vh" />
-      </FixedProduct>
-      <StyledRight>{children}</StyledRight>
+      <StyledBody>{children}</StyledBody>
 
       <FooterDesktop
         email={`info@nhinstitute.pl`}

@@ -3,9 +3,3 @@ Tenfertil TODOs
 4. Wyciągnąć dane do sitemetadata
 
 6. SEO !!!!!!
-
-UWAGI:
-MOBILE:
-5) błąd loga na dole- wysyłam w załączniku eps i svg loga NHI
-Na podstronie "gdzie" :
-1) inne odległości i rozmiar, przez to nie jest do końca zrozumiałe jaki bttn nalezy do której z aptek 

@@ -6,10 +6,14 @@ import Menu from "./menu"
 import MenuButton from "./menu-button"
 
 const StyledHeaderSmall = styled.div`
+  position: sticky;
+  top: 0;
   display: flex;
-  padding: 1rem;
   justify-content: space-between;
   align-items: center;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  z-index: 1000;
 `
 
 const HeaderMobile = () => {
@@ -22,7 +26,7 @@ const HeaderMobile = () => {
   return (
     <>
       <StyledHeaderSmall>
-        <Logo width="125px" />
+        <Logo width="250px" />
         <MenuButton handleClick={handleClick} isVisible={isVisible} />
       </StyledHeaderSmall>
 

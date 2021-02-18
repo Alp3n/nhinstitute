@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
@@ -22,9 +22,9 @@ const LogoNhi = props => {
   `)
 
   return (
-    <a href="https://nhinstitute.pl" target="_blank" rel="noreferrer">
+    <Link to="/">
       <StyledImg fluid={data.nhi.childImageSharp.fluid} {...props} />
-    </a>
+    </Link>
   )
 }
 

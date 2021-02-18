@@ -8,22 +8,21 @@ import Menu from "./menu"
 import MenuButton from "./menu-button"
 
 const StyledHeader = styled.header`
-  position: fixed;
+  position: sticky;
+  top: 0;
   display: flex;
-  flex-direction: column;
-  width: 50%;
-  justify-content: space-between;
   align-items: center;
-  top: 2rem;
+  width: 100%;
+  background-color: #f8f8f8;
+  z-index: 1000;
 `
 
 const StyledBox = styled.div`
-  position: fixed;
   display: flex;
-  width: 40%;
   justify-content: space-between;
   align-items: center;
-  padding-right: 1rem;
+  width: 100%;
+  margin: 16px 15%;
 `
 
 const HeaderDesktop = () => {
@@ -36,15 +35,16 @@ const HeaderDesktop = () => {
   return (
     <StyledHeader>
       <StyledBox>
-        <Logo width="200px" />
-        {openMenu ? (
+        <Logo width="350px" />
+        <Nav flex="flex" />
+        {/* openMenu ? (
           <MenuButton handleClick={handleClick} isVisible={isVisible} />
         ) : (
           <Nav flex="flex" />
-        )}
+        ) */}
       </StyledBox>
 
-      <Menu isVisible={isVisible} />
+      {/* <Menu isVisible={isVisible} /> */}
     </StyledHeader>
   )
 }

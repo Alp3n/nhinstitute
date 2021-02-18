@@ -1,49 +1,47 @@
 import React from "react"
 import styled from "styled-components"
 import myTheme from "../../styles/myTheme"
+import Img from "gatsby-image"
 
 const circles = [
   {
     color: myTheme.color["portrait-1"],
-    left: "-4px",
+    left: "-30px",
     height: "100%",
     width: "100%",
     zIndex: 1,
   },
   {
     color: myTheme.color["portrait-2"],
-    left: "2px",
+    left: "10px",
     height: "100%",
     width: "100%",
     zIndex: 2,
   },
   {
     color: myTheme.color["portrait-3"],
-    left: "-1px",
-    height: "80%",
-    width: "80%",
+    left: "-10px",
+    height: "90%",
+    width: "90%",
     zIndex: 3,
   },
 ]
 
-const StyledCirclesWrapper = styled.div`
+const StyledPortraitWrapper = styled.div`
   display: flex;
-  height: 2rem;
-  width: 2rem;
+  height: 15vw;
+  width: 15vw;
   position: relative;
   justify-content: center;
   align-items: center;
 `
 
-const StyledCircle = styled.div`
+const StyledPortrait = styled(Img)`
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 100%;
-  background-color: white;
-  height: 70%;
-  width: 70%;
+  border: 2px solid white;
+  height: auto;
+  width: 12vw;
   z-index: 4;
 `
 
@@ -55,11 +53,10 @@ const StyledBackground = styled.div`
   width: ${props => props.width};
   border-radius: 100%;
 `
-
-const CirclesBullet = () => {
+const AboutPersonPortrait = ({ image }) => {
   return (
-    <StyledCirclesWrapper>
-      <StyledCircle />
+    <StyledPortraitWrapper>
+      <StyledPortrait fluid={image} />
       {circles.map(circle => (
         <StyledBackground
           key={circle.color}
@@ -70,8 +67,8 @@ const CirclesBullet = () => {
           zIndex={circle.zIndex}
         />
       ))}
-    </StyledCirclesWrapper>
+    </StyledPortraitWrapper>
   )
 }
 
-export default CirclesBullet
+export default AboutPersonPortrait

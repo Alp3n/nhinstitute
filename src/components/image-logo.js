@@ -11,9 +11,9 @@ const StyledImg = styled(Img)`
 const ImageLogo = props => {
   const data = useStaticQuery(graphql`
     query {
-      imageLogoSmall: file(name: { eq: "logo-small" }) {
+      imageLogoSmall: file(name: { eq: "nhi" }) {
         childImageSharp {
-          fluid(quality: 50) {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

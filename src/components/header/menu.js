@@ -6,7 +6,7 @@ import Nav from "./nav"
 
 const StyledMenuWrapper = styled.div`
   position: absolute;
-  background-color: white;
+  background-color: #f8f8f8;
   width: 100%;
   flex-direction: column;
   display: ${props => (props.isVisible ? "block" : "none")};

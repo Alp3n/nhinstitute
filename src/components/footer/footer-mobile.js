@@ -12,7 +12,7 @@ const StyledFooterWrapper = styled.footer`
   align-items: center;
   flex-direction: column;
   padding: 2rem 0;
-  background-color: ${myTheme.color.background};
+  background-color: #f8f8f8;
 `
 
 const StyledInfoWrapper = styled.div`

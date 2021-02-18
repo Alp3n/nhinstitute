@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://www.tenfertil.pl">
-    TENfertil&reg;ON
+  <a href="https://nhinstitute.pl">
+    Nutrition Heath Insitute
   </a>
 </p>
 <h1 align="center">
-  TENfertil&reg;ON product page
+  Business page for NH Institute
 </h1>
 
-Product page made with Gatsby for Nutrition Health Institute [nhinstitute.pl]
+Business page made with Gatsby for Nutrition Health Institute [https://nhinstitute.pl]

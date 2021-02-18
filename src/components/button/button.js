@@ -11,16 +11,16 @@ const StyledButtonTo = styled(Link)`
   max-width: 300px;
   width: 90%;
   border: none;
-  background-color: ${myTheme.color.button};
+  background-color: ${myTheme.color["blue-1"]};
   color: ${myTheme.color.white};
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2rem;
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 1rem 2rem;
   &:hover {
-    background-color: ${myTheme.color["blue-4"]};
+    background-color: ${myTheme.color.button};
     cursor: pointer;
   }
 `
@@ -30,19 +30,18 @@ const StyledButtonHref = styled.a`
   align-items: center;
   justify-content: center;
   height: 48px;
-  max-width: 250px;
+  max-width: 300px;
   border: none;
-  background-color: ${myTheme.color.button};
+  background-color: ${myTheme.color["blue-1"]};
   color: ${myTheme.color.white};
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2rem;
-  margin: 1rem 0;
-  padding: 1rem;
+  padding: 1rem 2rem;
 
   &:hover {
-    background-color: ${myTheme.color["blue-4"]};
+    background-color: ${myTheme.color.button};
     cursor: pointer;
   }
 `

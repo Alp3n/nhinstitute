@@ -42,9 +42,9 @@ const MenuButton = ({ handleClick, isVisible }) => {
       className={isVisible ? "opened" : "closed"}
     >
       {isVisible ? (
-        <CgClose size="24px" color={myTheme.color.button} />
+        <CgClose size="24px" color={myTheme.color["blue-4"]} />
       ) : (
-        <CgMenu size="24px" color={myTheme.color.button} />
+        <CgMenu size="24px" color={myTheme.color["blue-4"]} />
       )}
     </StyledButton>
   )

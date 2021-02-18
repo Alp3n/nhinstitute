@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `TenFertil On`,
+    title: `Nutrition Health Institute`,
     description: ` TenFertil On to suplement diety dla mężczyzn starających się o dzieci.`,
     author: `nhinstitute.pl`,
   },

@@ -8,16 +8,17 @@ import LogoNhi from "../logo/logo-nhi"
 const StyledFooterWrapper = styled.footer`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 3rem 0;
-  background-color: ${myTheme.color.background};
+  background-color: #f8f8f8;
   margin-top: 10%;
 `
 
 const StyledContent = styled.div`
-  width: 55%;
+  width: 70%;
 `
 const StyledInfoWrapper = styled.div`
   display: flex;
@@ -62,7 +63,7 @@ const FooterDesktop = ({ number, email, company }) => {
             {company}
           </StyledText>
         </StyledInfoWrapper>
-        <p>© {new Date().getFullYear()} Nhinstitute</p>
+        <p>&copy; {new Date().getFullYear()} Nutrition Health Institute</p>
       </StyledContent>
     </StyledFooterWrapper>
   )

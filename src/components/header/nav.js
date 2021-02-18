@@ -4,8 +4,9 @@ import { Link } from "gatsby"
 import myTheme from "../../styles/myTheme"
 
 const links = [
-  { href: "/#about", name: "O TENFERTIL" },
-  { href: "/#facts", name: "FAKTY I PORADY" },
+  { href: "#about", name: "O NAS" },
+  { href: "#products", name: "PRODUKTY" },
+  { href: "#cooperation", name: "WSPÓŁPRACA" },
   { href: "#footer", name: "KONTAKT" },
 ]
 
@@ -20,22 +21,23 @@ const StyledList = styled.ul`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 400;
-  color: ${myTheme.color.button};
+  color: ${myTheme.color["blue-4"]};
 
   &:visited {
-    color: ${myTheme.color.button};
+    color: ${myTheme.color["blue-4"]};
   }
 
   &:hover {
-    color: ${myTheme.color["blue-4"]};
+    color: ${myTheme.color.button};
   }
 `
 
 const StyledListPoint = styled.li`
+  margin: 0;
   list-style: none;
-  margin: 1rem 1rem;
+  margin-left: 16px;
 `
 
 const Nav = props => {

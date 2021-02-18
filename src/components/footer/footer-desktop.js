@@ -14,7 +14,6 @@ const StyledFooterWrapper = styled.footer`
   width: 100%;
   padding: 3rem 0;
   background-color: #f8f8f8;
-  margin-top: 10%;
 `
 
 const StyledContent = styled.div`
@@ -43,7 +42,7 @@ const FooterDesktop = ({ number, email, company }) => {
     <StyledFooterWrapper id="footer">
       <StyledContent>
         {/* <LogoCss companyName={`Nutrition Health Institute`} /> */}
-        <LogoNhi width="50%" />
+        <LogoNhi width="400px" />
         <StyledInfoWrapper>
           <StyledContactWrapper>
             <StyledContactText>

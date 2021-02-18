@@ -4,11 +4,9 @@ import { useMediaQuery } from "react-responsive"
 import Logo from "../logo/logo"
 
 import Nav from "./nav"
-import Menu from "./menu"
-import MenuButton from "./menu-button"
 
 const StyledHeader = styled.header`
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   align-items: center;
@@ -26,11 +24,11 @@ const StyledBox = styled.div`
 `
 
 const HeaderDesktop = () => {
-  const [isVisible, setVisible] = useState(false)
-  const openMenu = useMediaQuery({ query: "(max-width: 1630px)" })
-  const handleClick = () => {
-    setVisible(isVisible => !isVisible)
-  }
+  // const [isVisible, setVisible] = useState(false)
+  // const openMenu = useMediaQuery({ query: "(max-width: 1630px)" })
+  // const handleClick = () => {
+  //   setVisible(isVisible => !isVisible)
+  // }
 
   return (
     <StyledHeader>

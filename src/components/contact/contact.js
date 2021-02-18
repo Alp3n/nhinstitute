@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import ContactForm from "./contact-form"
+import ContactImage from "./contact-image"
 
 const StyledWrapper = styled.div`
   display: grid;
@@ -20,7 +21,7 @@ const Contact = props => {
   console.log(props)
   return (
     <StyledWrapper>
-      
+      <ContactImage />
       <ContactForm />
     </StyledWrapper>
   )

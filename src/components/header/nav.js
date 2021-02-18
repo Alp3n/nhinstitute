@@ -21,7 +21,7 @@ const StyledList = styled.ul`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: ${myTheme.color["blue-4"]};
 
@@ -37,7 +37,7 @@ const StyledLink = styled(Link)`
 const StyledListPoint = styled.li`
   margin: 0;
   list-style: none;
-  margin-left: 16px;
+  margin-left: 20px;
 `
 
 const Nav = props => {

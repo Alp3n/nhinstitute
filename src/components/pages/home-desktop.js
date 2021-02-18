@@ -29,7 +29,13 @@ const HomeDesktop = () => {
           <Product key={item.id} item={item} width={`25vw`} height={`25vw`} />
         ))}
       </Section>
-      <Contact />
+      <Section
+        id={pageData.sections.cooperation.id}
+        title={pageData.sections.cooperation.title}
+        texts={pageData.sections.cooperation.texts}
+      >
+        <Contact />
+      </Section>
     </>
   )
 }

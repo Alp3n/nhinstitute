@@ -6,8 +6,12 @@ import SectionParagraph from "./section-paragraph"
 
 const StyledSection = styled.section`
   width: 100%;
-  margin: 5% 0 10% 0;
+  margin-bottom: 8%;
   line-height: 40px;
+
+  &p:first-child {
+    margin: 300px;
+  }
 `
 const StyledHeading = styled.h1`
   font-size: 56px;

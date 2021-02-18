@@ -43,6 +43,7 @@ const StyledBreakLine = styled.div`
 const StyledButtons = styled.div`
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 `
 
 const Product = ({ width, height, buttonOff, item }) => {

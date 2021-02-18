@@ -9,6 +9,7 @@ const StyledScrollArrowWrapper = styled.div`
   height: 65px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5%;
 `
 
 const StyledScrollArrow = styled(Link)`

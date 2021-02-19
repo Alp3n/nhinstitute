@@ -7,24 +7,47 @@ import GalleryImage from "./galleryImage"
 const StyledGallerySmall = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 1fr);
-  grid-template-rows: repeat(2, minmax(200px, 230px));
+  grid-template-rows: repeat(auto-fill, 1fr);
   grid-gap: 0.5rem;
   grid-template-areas:
-    "img1 img2"
-    "img3 img4";
+    "img1 img1 img1"
+    "img2 img2 img3"
+    "img4 img5 img6";
 
-  .p-1 {
+  .title {
     grid-area: img1;
   }
-  .p-2 {
+  .mama {
     grid-area: img2;
   }
-  .p-3 {
+  .molecules {
     grid-area: img3;
   }
-  .p-4 {
+  .water {
     grid-area: img4;
   }
+  .doctor {
+    grid-area: img5;
+  }
+  .probes {
+    grid-area: img6;
+  }
+`
+const StyledHeading = styled.h1`
+  font-weight: 300;
+  font-size: 42px;
+`
+
+const StyledP = styled.p`
+  font-size: 18px;
+`
+
+const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-top: 16px;
 `
 
 const GalleryMobile = () => {
@@ -33,7 +56,7 @@ const GalleryMobile = () => {
       imagesSmall: allFile(
         filter: { relativeDirectory: { eq: "jpg" } }
         sort: { fields: name }
-        limit: 4
+        limit: 5
       ) {
         nodes {
           id
@@ -50,6 +73,18 @@ const GalleryMobile = () => {
 
   return (
     <StyledGallerySmall>
+      <StyledWrapper className="title">
+        <StyledHeading>
+          ZDROWIE <br />I PŁODNOŚĆ
+        </StyledHeading>
+        <StyledP>
+          Best people,
+          <br />
+          best products,
+          <br />
+          best opportunities
+        </StyledP>
+      </StyledWrapper>
       {data.imagesSmall.nodes.map(image => (
         <GalleryImage
           key={image.id}

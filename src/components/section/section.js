@@ -12,11 +12,22 @@ const StyledSection = styled.section`
   &p:first-child {
     margin: 300px;
   }
+
+  @media only screen and (max-width: 700px) {
+    margin: 10% 0 10% 0;
+    line-height: 35px;
+  }
 `
 const StyledHeading = styled.h1`
   font-size: 56px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 38px;
+    font-weight: 300;
+    margin: 0 5%;
+  }
 `
 
 const Section = ({ id, children, texts, title }) => {

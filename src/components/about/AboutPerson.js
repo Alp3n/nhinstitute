@@ -4,6 +4,7 @@ import myTheme from "../../styles/myTheme"
 import AboutPersonPortrait from "./AboutPersonPortrait"
 
 import { CgArrowLeft } from "react-icons/cg"
+import { useMediaQuery } from "react-responsive"
 
 const AboutWrapper = styled.div`
   display: grid;
@@ -17,6 +18,7 @@ const AboutWrapper = styled.div`
   .button {
     grid-area: button;
   }
+  margin-bottom: 8%;
 `
 
 const AboutPersonWrapper = styled.div`
@@ -27,16 +29,29 @@ const AboutPersonWrapper = styled.div`
 const PersonName = styled.h2`
   margin: 5% 0;
   font-weight: 400;
+  text-transform: uppercase;
+  @media only screen and (max-width: 700px) {
+    font-size: 18px;
+    line-height: normal;
+  }
 `
 
 const PersonTitles = styled.span`
   font-size: ${myTheme.typography["text-p2"]};
   color: ${myTheme.color["blue-4"]};
   text-align: center;
-  font-family: "Lato";
   font-weight: 300;
+  @media only screen and (max-width: 1200px) {
+    font-size: 16px;
+    line-height: normal;
+  }
+  @media only screen and (max-width: 700px) {
+    width: 90%;
+    font-size: 14px;
+    line-height: normal;
+  }
 `
-
+//TODO BUTTON TO ARROW
 const StyledButton = styled.button`
   display: flex;
   align-items: center;
@@ -52,6 +67,14 @@ const StyledButton = styled.button`
   height: 60px;
   width: 60%;
 
+  @media only screen and (max-width: 1200px) {
+    width: 43vw;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    width: 43vw;
+  }
+
   &:hover {
     background-color: ${myTheme.color.button};
     cursor: pointer;
@@ -64,6 +87,9 @@ const StyledButton = styled.button`
 `
 
 const AboutPerson = ({ setSelectedPerson, person, selectedPerson }) => {
+  const isBigScreen = useMediaQuery({ query: "(min-width:1201px)" })
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" })
+
   function handleOnClick(person) {
     setSelectedPerson(person)
   }

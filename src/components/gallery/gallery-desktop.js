@@ -14,6 +14,7 @@ const StyledGalleryBig = styled.div`
   grid-template-areas:
     "img1 img1 img2 img2 img3"
     "img4 img4 img5 img6 img7";
+  margin-top: 5%;
 
   .title {
     grid-area: img1;
@@ -38,7 +39,6 @@ const StyledGalleryBig = styled.div`
   }
 `
 const StyledHeading = styled.h1`
-  /* margin-bottom: 8%; */
   font-weight: 400;
   font-size: 3.3vw;
 `

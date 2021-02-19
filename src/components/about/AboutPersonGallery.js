@@ -11,6 +11,10 @@ const StyledPersonGallery = styled.div`
   display: grid;
   grid-column-gap: 50px;
   grid-template-columns: repeat(3, 1fr);
+
+  @media only screen and (max-width: 1200px) {
+    grid-template-columns: auto;
+  }
 `
 
 const StyledPersonWrapper = styled.div``

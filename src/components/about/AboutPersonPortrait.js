@@ -6,21 +6,24 @@ import Img from "gatsby-image"
 const circles = [
   {
     color: myTheme.color["portrait-1"],
-    left: "-30px",
+    // left: "-30px",
+    left: "-10%",
     height: "100%",
     width: "100%",
     zIndex: 1,
   },
   {
     color: myTheme.color["portrait-2"],
-    left: "10px",
+    left: "3.3%",
+    // left: "10px",
     height: "100%",
     width: "100%",
     zIndex: 2,
   },
   {
     color: myTheme.color["portrait-3"],
-    left: "-10px",
+    left: "-3.3%",
+    // left: "-10px",
     height: "90%",
     width: "90%",
     zIndex: 3,
@@ -34,6 +37,16 @@ const StyledPortraitWrapper = styled.div`
   position: relative;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 1200px) {
+    height: 30vw;
+    width: 30vw;
+  }
+
+  @media only screen and (max-width: 700px) {
+    height: 60vw;
+    width: 60vw;
+  }
 `
 
 const StyledPortrait = styled(Img)`
@@ -43,6 +56,12 @@ const StyledPortrait = styled(Img)`
   height: auto;
   width: 12vw;
   z-index: 4;
+  @media only screen and (max-width: 1200px) {
+    width: 26vw;
+  }
+  @media only screen and (max-width: 700px) {
+    width: 50vw;
+  }
 `
 
 const StyledBackground = styled.div`

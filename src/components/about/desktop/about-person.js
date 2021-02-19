@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import myTheme from "../../../styles/my-theme"
 import { CgArrowLeft } from "react-icons/cg"
-
 import AboutPersonPortrait from "../about-person-portrait"
 
 const AboutWrapper = styled.div`

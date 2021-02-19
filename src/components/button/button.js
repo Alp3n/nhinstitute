@@ -8,8 +8,8 @@ const StyledButtonTo = styled(Link)`
   align-items: center;
   justify-content: center;
   height: 48px;
-  max-width: 300px;
-  width: 90%;
+  /* max-width: 300px; */
+  /* width: 90%; */
   border: none;
   background-color: ${myTheme.color["blue-1"]};
   color: ${myTheme.color.white};
@@ -30,7 +30,7 @@ const StyledButtonHref = styled.a`
   align-items: center;
   justify-content: center;
   height: 48px;
-  max-width: 300px;
+  /* max-width: 300px; */
   border: none;
   background-color: ${myTheme.color["blue-1"]};
   color: ${myTheme.color.white};

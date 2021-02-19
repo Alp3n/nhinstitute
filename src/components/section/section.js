@@ -12,10 +12,15 @@ const StyledSection = styled.section`
     margin: 300px;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 1200px) {
     margin: 10% 0;
     padding: 0 5%;
     line-height: 35px;
+
+    &.products {
+      background-color: #f4f4f4;
+      padding: 15% 5%;
+    }
   }
 `
 const StyledHeading = styled.h1`
@@ -30,9 +35,9 @@ const StyledHeading = styled.h1`
   }
 `
 
-const Section = ({ id, children, texts, title }) => {
+const Section = ({ id, children, texts, title, className }) => {
   return (
-    <StyledSection id={id}>
+    <StyledSection id={id} className={className}>
       <StyledHeading>{title}</StyledHeading>
       {texts.map((text, index) => (
         <SectionParagraph key={index}>{text.text}</SectionParagraph>

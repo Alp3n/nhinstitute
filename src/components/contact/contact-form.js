@@ -10,6 +10,9 @@ const StyledForm = styled.form`
   flex-direction: column;
   width: 70%;
   place-self: center;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+  }
 `
 const StyledLabel = styled.div`
   font-size: ${myTheme.typography["text-p3"]};
@@ -38,6 +41,8 @@ const StyledInput = styled.input`
   }
   &::placeholder {
     color: ${myTheme.color["blue-1"]};
+  }
+  &:nth-child(2)::placeholder {
     text-transform: capitalize;
   }
 `
@@ -87,17 +92,20 @@ const ContactForm = () => {
 
     return error
   }
-  //TODO GET FORM
+
   return (
     <StyledForm
       method="post"
-      name="contact"
       id="contact"
       onSubmit={() => validateEmail("submit", email)}
+      accept-charset="UTF-8"
+      // action="https://www.formbackend.com/f/c5684e63fd8d8083"
+      action="https://livedemo.installatron.com/1613723424formtools/process.php"
     >
       <StyledHeading>Wypełnij formularz, żeby wziąć udział:</StyledHeading>
       <input type="hidden" name="bot-field" />
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form_tools_initialize_form" value="1" />
+      <input type="hidden" name="form_tools_form_id" value="1" />
       <div>
         <StyledInput
           type={"text"}
@@ -120,8 +128,8 @@ const ContactForm = () => {
         />
         <StyledInput
           type={"phone"}
-          name={"phone"}
-          id={"phone"}
+          name={"phoneNumber"}
+          id={"phoneNumber"}
           placeholder={"Telefon"}
           required={true}
           value={phone}

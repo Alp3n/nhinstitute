@@ -4,6 +4,8 @@ import AboutPersonGalleryMobile from "../about/mobile/about-person-gallery-mobil
 import { pageData } from "../../content/data/page-data"
 
 import GalleryMobile from "../gallery/gallery-mobile"
+import Product from "../product/product"
+import ContactForm from "../contact/contact-form"
 
 const HomeDesktop = () => {
   return (
@@ -15,6 +17,23 @@ const HomeDesktop = () => {
         texts={pageData.sections.about.texts}
       >
         <AboutPersonGalleryMobile />
+      </Section>
+      <Section
+        id={pageData.sections.products.id}
+        title={pageData.sections.products.title}
+        texts={pageData.sections.products.texts}
+        className="products"
+      >
+        {pageData.sections.products.items.map(item => (
+          <Product key={item.id} item={item} width={`80vw`} height={`80vw`} />
+        ))}
+      </Section>
+      <Section
+        id={pageData.sections.cooperation.id}
+        title={pageData.sections.cooperation.title}
+        texts={pageData.sections.cooperation.texts}
+      >
+        <ContactForm />
       </Section>
     </>
   )

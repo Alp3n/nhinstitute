@@ -9,7 +9,6 @@ const AboutWrapper = styled.div`
   display: grid;
   justify-items: center;
   align-content: space-between;
-  grid-gap: 16px;
   grid-template-areas: "person" "button";
   .person {
     grid-area: person;

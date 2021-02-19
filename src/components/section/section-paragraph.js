@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import myTheme from "../../styles/myTheme"
+import myTheme from "../../styles/my-theme"
 
 const StyledParagraph = styled.p`
   font-size: ${myTheme.typography["text-p"]};
@@ -9,8 +9,8 @@ const StyledParagraph = styled.p`
 
   @media only screen and (max-width: 700px) {
     font-size: 18px;
-    /* line-height: normal; */
-    margin: 5% 5% 15% 5%;
+    /* margin: 5% 10% 15% 10%; */
+    margin-bottom: 15%;
   }
 `
 

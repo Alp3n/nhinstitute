@@ -1,20 +1,15 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-// import myTheme from "../../styles/myTheme"
 
-import AboutPerson from "./AboutPerson"
+import AboutPerson from "./about-person"
 
 import { graphql, useStaticQuery } from "gatsby"
-import AboutPersonMore from "./AboutPersonMore"
+import AboutPersonMore from "./about-person-more"
 
 const StyledPersonGallery = styled.div`
   display: grid;
   grid-column-gap: 50px;
   grid-template-columns: repeat(3, 1fr);
-
-  @media only screen and (max-width: 1200px) {
-    grid-template-columns: auto;
-  }
 `
 
 const StyledPersonWrapper = styled.div``

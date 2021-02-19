@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { CgMenu, CgClose } from "react-icons/cg"
-import myTheme from "../../styles/myTheme"
+import myTheme from "../../styles/my-theme"
 
 const StyledButton = styled.div`
   display: flex;

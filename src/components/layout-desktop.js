@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 
 import HeaderDesktop from "./header/header-desktop"
-import Product from "./product/product"
-
 import "./layout.css"
 
 import FooterDesktop from "./footer/footer-desktop"

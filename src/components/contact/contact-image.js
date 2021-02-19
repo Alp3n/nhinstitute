@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import myTheme from "../../styles/myTheme"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 

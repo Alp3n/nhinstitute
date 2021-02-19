@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import myTheme from "../../styles/myTheme"
+import myTheme from "../../styles/my-theme"
 
 const StyledHeading = styled.h2`
   font-weight: 400;

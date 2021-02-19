@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import Button from "../button/button"
-import myTheme from "../../styles/myTheme"
+import myTheme from "../../styles/my-theme"
 
 const StyledImg = styled(Img)`
   margin-bottom: 4vh;

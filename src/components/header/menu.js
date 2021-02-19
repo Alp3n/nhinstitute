@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import myTheme from "../../styles/myTheme"
+import myTheme from "../../styles/my-theme"
 
 import Nav from "./nav"
 
 const StyledMenuWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   background-color: #f8f8f8;
   width: 100%;
   flex-direction: column;

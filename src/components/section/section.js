@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import myTheme from "../../styles/myTheme"
 
 import SectionParagraph from "./section-paragraph"
 
@@ -14,7 +13,8 @@ const StyledSection = styled.section`
   }
 
   @media only screen and (max-width: 700px) {
-    margin: 10% 0 10% 0;
+    margin: 10% 0;
+    padding: 0 5%;
     line-height: 35px;
   }
 `
@@ -26,7 +26,7 @@ const StyledHeading = styled.h1`
   @media only screen and (max-width: 700px) {
     font-size: 38px;
     font-weight: 300;
-    margin: 0 5%;
+    /* margin: 0 10%; */
   }
 `
 

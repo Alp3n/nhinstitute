@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import myTheme from "../../styles/myTheme"
+import myTheme from "../../styles/my-theme"
 
 const StyledButtonTo = styled(Link)`
   display: flex;

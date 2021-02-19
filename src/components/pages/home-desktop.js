@@ -1,10 +1,9 @@
 import React from "react"
-import styled from "styled-components"
 import { pageData } from "../../content/data/page-data"
 import GalleryDesktop from "../gallery/gallery-desktop"
-import ScrollArrow from "../ScrollArrow"
-import Section from "../section/Section"
-import AboutPersonGallery from "../about/AboutPersonGallery"
+import ScrollArrow from "../scroll-arrow"
+import Section from "../section/section"
+import AboutPersonGallery from "../about/desktop/about-person-gallery"
 import Product from "../product/product"
 import Contact from "../contact/Contact"
 

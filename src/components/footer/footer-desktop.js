@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import myTheme from "../../styles/myTheme"
+import myTheme from "../../styles/my-theme"
 // import LogoCss from "../logo/logo-css"
 import { CgSmartphone, CgMail } from "react-icons/cg"
 import LogoNhi from "../logo/logo-nhi"

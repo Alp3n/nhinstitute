@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-import { useMediaQuery } from "react-responsive"
+
 import Logo from "../logo/logo"
 
 import Nav from "./nav"

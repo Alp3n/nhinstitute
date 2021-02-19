@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import myTheme from "../../styles/myTheme"
-import AboutPerson from "./AboutPerson"
+import myTheme from "../../../styles/my-theme"
+import AboutPerson from "./about-person"
 
 const StyledWrapper = styled.div`
   display: grid;
@@ -23,8 +23,7 @@ const StyledInfoWrapper = styled.div`
   grid-area: info;
 `
 
-const StyledInfo = styled.span``
-//TODO fix grid
+const StyledInfo = styled.p``
 const AboutPersonMore = ({ selectedPerson, setSelectedPerson }) => {
   return (
     <StyledWrapper className="aboutperson">

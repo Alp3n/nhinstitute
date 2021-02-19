@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import myTheme from "../../styles/myTheme"
+import myTheme from "../../styles/my-theme"
 
 const links = [
   { href: "#about", name: "O NAS" },
@@ -16,6 +16,9 @@ const StyledList = styled.ul`
 
   @media only screen and (min-width: 1201px) {
     display: flex;
+  }
+  @media only screen and (max-width: 1200px) {
+    line-height: 2rem;
   }
 `
 

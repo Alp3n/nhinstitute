@@ -17,8 +17,6 @@ const StyledWrapper = styled.div`
 const StyledInfoWrapper = styled.div`
   border-left: 1px solid ${myTheme.color["blue-1"]};
   padding-left: 10%;
-  font-weight: 300;
-  font-size: ${myTheme.typography["text-p"]};
   color: ${myTheme.color["blue-4"]};
   grid-area: info;
 `

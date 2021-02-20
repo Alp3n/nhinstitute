@@ -25,7 +25,14 @@ const HomeDesktop = () => {
         texts={pageData.sections.products.texts}
       >
         {pageData.sections.products.items.map(item => (
-          <Product key={item.id} item={item} width={`25vw`} height={`25vw`} />
+          <Product
+            key={item.id}
+            item={item}
+            width={`25vw`}
+            height={`25vw`}
+            soonPL={pageData.sections.products.soonPL}
+            soonEN={pageData.sections.products.soonEN}
+          />
         ))}
       </Section>
       <Section
@@ -33,7 +40,7 @@ const HomeDesktop = () => {
         title={pageData.sections.cooperation.title}
         texts={pageData.sections.cooperation.texts}
       >
-        <Contact />
+        <Contact form={pageData.form} />
       </Section>
     </>
   )

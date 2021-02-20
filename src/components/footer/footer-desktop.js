@@ -1,14 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import myTheme from "../../styles/my-theme"
-// import LogoCss from "../logo/logo-css"
 import { CgSmartphone, CgMail } from "react-icons/cg"
 import LogoNhi from "../logo/logo-nhi"
 
 const StyledFooterWrapper = styled.footer`
   display: flex;
   flex-direction: column;
-  /* align-items: flex-end; */
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -37,11 +35,10 @@ const StyledText = styled.p`
   margin: 0;
 `
 
-const FooterDesktop = ({ number, email, company }) => {
+const FooterDesktop = ({ number, email, company, copyrights }) => {
   return (
     <StyledFooterWrapper id="footer">
       <StyledContent>
-        {/* <LogoCss companyName={`Nutrition Health Institute`} /> */}
         <LogoNhi width="400px" />
         <StyledInfoWrapper>
           <StyledContactWrapper>
@@ -62,7 +59,9 @@ const FooterDesktop = ({ number, email, company }) => {
             {company}
           </StyledText>
         </StyledInfoWrapper>
-        <p>&copy; {new Date().getFullYear()} Nutrition Health Institute</p>
+        <p>
+          &copy; {new Date().getFullYear()} {copyrights}
+        </p>
       </StyledContent>
     </StyledFooterWrapper>
   )

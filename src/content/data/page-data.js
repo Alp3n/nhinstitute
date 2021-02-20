@@ -1,3 +1,4 @@
+import React from "react"
 export const pageData = {
   companyName: "Nutrition Health Institute",
   navbar: {
@@ -7,44 +8,8 @@ export const pageData = {
       { name: "produkty", href: "#products" },
       { name: "współpraca", href: "#cooperation" },
       { name: "kontakt", href: "#contact" },
-      { name: "pl/en", href: "/en/" },
     ],
   },
-  gallery: [
-    { color: "black", area: "img1", src: "" },
-    { color: "red", area: "img2", src: "" },
-    { color: "yellow", area: "img3", src: "" },
-    { color: "blue", area: "img4", src: "" },
-    { color: "grey", area: "img5", src: "" },
-    { color: "pink", area: "img6", src: "" },
-    { color: "black", area: "img7", src: "" },
-  ],
-  people: [
-    {
-      name: "Tomasz Rokicki",
-      titles: [
-        "Ekspert Medyczny",
-        "Doktor Nauk Medycznych",
-        "Specjalista Ginekolog-Położnik",
-      ],
-    },
-    {
-      name: "Adriana Grodzicka",
-      titles: ["Prezes Zarządu"],
-    },
-    {
-      name: "Jan Karol Wolski",
-      titles: [
-        "Ekspert Medyczny",
-        "Specjalista Urolog",
-        "FEBU 4860",
-        "Specjalista Chirurg Dziecięcy",
-        "Specjalista Urolog Dziecięcy",
-        "Androlog Kliniczny",
-        "Certyfikat PTA",
-      ],
-    },
-  ],
   sections: {
     about: {
       id: "about",
@@ -62,30 +27,53 @@ export const pageData = {
       texts: [
         {
           text:
-            "Preparaty nasze zostały opracowane na podstawie wieloletnich badań prowadzonych przez wybitnych polskich specjalistów pracujących w najlepszych klinikach zajmujących się leczeniem niepłodności przy współpracy ze środowiskiem akademickim, pracownikami służby zdrowia oraz pacjentami. Nasze suplementy spełniają najwyższe standardy jakościowe, są bezpieczne, a ich głównym zadaniem jest pomaganie pacjentom starającym się o potomstwo w spełnieniu ich pragnienia.",
+            "Nasze preparaty zostały opracowane na podstawie wieloletnich badań prowadzonych przez wybitnych polskich specjalistów pracujących w najlepszych klinikach zajmujących się leczeniem niepłodności przy współpracy ze środowiskiem akademickim, pracownikami służby zdrowia oraz pacjentami. Nasze suplementy spełniają najwyższe standardy jakościowe, są bezpieczne, a ich głównym zadaniem jest pomaganie pacjentom starającym się o potomstwo w spełnieniu ich pragnienia.",
         },
       ],
+      soonPL: (
+        <p>
+          Wkrótce będę dostępne na rynku Polskim <strong>TENfertil ONA</strong>{" "}
+          i <strong>TENhair</strong>
+        </p>
+      ),
+      soonEN: (
+        <p>
+          Soon <strong>TENfertil ONA</strong> and <strong>TENhair</strong> will
+          be available on Polish market.
+        </p>
+      ),
       items: [
         {
           id: 1,
-          name: "WIĘCEJ O TENfertil-ON",
-          image: "url",
+          name: "TENfertil ON",
+          heading: (
+            <h2>
+              TENfertil<sup>&copy;</sup>ON
+            </h2>
+          ),
+          image: "../../images/png/tenfertil.png",
+          buttonMorePL: {
+            href: "https://tenfertil.pl",
+            label: "więcej o tenfertil",
+          },
+          buttonBuyPL: {
+            href: "https://tenfertil.pl/kup",
+            label: "gdzie kupić",
+          },
           texts: [
             {
               text:
-                "Skład TENfertil-On oraz dawki przyjmowania zostały opracowane na podstawie wieloletnich doświadczeń specjalistów, pracujących w wiodących polskich klinikach i zajmujących się leczeniem niepłodności, w oparciu o najnowszą wiedzę medyczną i wytyczne towarzystw naukowych zajmujących się rozrodem człowieka.",
+                "Skład TENfertil ON oraz dawki przyjmowania zostały opracowane na podstawie wieloletnich doświadczeń specjalistów, pracujących w wiodących polskich klinikach i zajmujących się leczeniem niepłodności, w oparciu o najnowszą wiedzę medyczną i wytyczne towarzystw naukowych zajmujących się rozrodem człowieka.",
             },
             {
               text:
-                "Preparat TENfertil-On może być stosowany przez mężczyzn starających się o dzieci. Szczególnie zalecany jest dla panów, u których stwierdzono obniżenie parametrów nasienia.",
+                "Preparat TENfertil ON może być stosowany przez mężczyzn starających się o dzieci. Szczególnie zalecany jest dla panów, u których stwierdzono obniżenie parametrów nasienia.",
             },
             {
               text:
-                "Czas stosowania preparatu nie powinien być krótszy niż 3 miesiące. Zaleca się przyjmowanie TENfertil-On przez cały okres starania się o potomstwo i leczenia niepłodności.",
+                "Czas stosowania preparatu nie powinien być krótszy niż 3 miesiące. Zaleca się przyjmowanie TENfertil ON przez cały okres starania się o potomstwo i leczenia niepłodności.",
             },
           ],
-          soon_pl: `Wkrótce będę dostępne na rynku Polski - `,
-          soon_en: `Soon TenFertil-Ona and TenHair will be available on Polish market.`,
         },
       ],
     },
@@ -99,10 +87,22 @@ export const pageData = {
         },
         {
           text:
-            "Współpraca w chwili obecnej opiera się na Badaniach klinicznych - Lekarze prowadzący leczenie i inni przedstawiciele zawodów medycznych realizują badania kliniczne w ośrodkach badawczych zgodnie z protokołami badań klinicznych zatwierdzonymi przez organy ochrony zdrowia i niezależne komisje bioetyczne.",
+            "Współpraca w chwili obecnej opiera się na Badaniach klinicznych. Lekarze prowadzący leczenie i inni przedstawiciele zawodów medycznych realizują badania kliniczne w ośrodkach badawczych zgodnie z protokołami badań klinicznych zatwierdzonymi przez organy ochrony zdrowia i niezależne komisje bioetyczne.",
         },
       ],
     },
+  },
+  form: {
+    formURL: "",
+    title: "Wypełnij formularz, żeby wziąć udział",
+    placeholders: {
+      fullName: "Imię i nazwisko",
+      email: "E-mail",
+      phoneNumber: "Numer telefonu",
+    },
+    buttonSendPL: "wyślij",
+    agreement:
+      "Wyrażam zgodę na wykorzystanie i przetwarzanie moich danych osobowych w celu realizacji zamówienia oraz kontaktu ze mną, wraz z przepisami rozporządzenia RODO o ochronie danych osobowych. Oświadczam, że zostałam(em) poinformowana(y) o przysługującym mi prawie dostępu do treści moich danych osobowych ich poprawiania oraz żądania usunięcia, jak również prawa do wycofania zgody w każdym czasie.",
   },
   footer: {
     id: "footer",
@@ -110,6 +110,7 @@ export const pageData = {
     number: "+48 666 368 005",
     email: "info@nhinstitute.pl",
     company:
-      "Sp.z.o.o. Białozora 9, 02-817 Warszawa, Polska KRS: 0000861627. REGON: 38710727. NIP: 9512507706.",
+      "Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska\nKRS: 0000861627\nREGON: 38710727\nNIP: 9512507706",
+    copyrights: "Nutrition Health Institute",
   },
 }

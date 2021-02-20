@@ -26,15 +26,13 @@ const AboutPersonWrapper = styled.div`
 `
 const PersonName = styled.h2`
   margin: 5% 0;
-  font-weight: 400;
   text-transform: uppercase;
 `
 
 const PersonTitles = styled.span`
-  font-size: ${myTheme.typography["text-p2"]};
+  /* font-size: ${myTheme.typography["text-p2"]}; */
   color: ${myTheme.color["blue-4"]};
   text-align: center;
-  font-weight: 300;
 `
 const StyledButton = styled.button`
   display: flex;
@@ -73,7 +71,7 @@ const AboutPerson = ({ setSelectedPerson, person, selectedPerson }) => {
         <AboutPersonPortrait
           image={person.frontmatter.featuredImage.childImageSharp.fluid}
         />
-        <PersonName size="xsmall">{person.frontmatter.name}</PersonName>
+        <PersonName>{person.frontmatter.name}</PersonName>
         {person.frontmatter.titles.length <= 3 ? (
           person.frontmatter.titles.map((title, index) => (
             <PersonTitles key={index}>{title}</PersonTitles>

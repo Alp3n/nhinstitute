@@ -16,7 +16,6 @@ const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto-fill, 1fr);
-  /* place-content: center;  */
   justify-content: center;
   grid-template-areas:
     "myimage heading"
@@ -76,9 +75,6 @@ const StyledBreakLine = styled.div`
     margin: 10% 0;
   }
 `
-const StyledButton = styled(Button)`
-  width: 100%;
-`
 
 const StyledButtons = styled.div`
   display: flex;
@@ -93,7 +89,7 @@ const StyledButtons = styled.div`
   }
 `
 
-const Product = ({ width, height, buttonOff, item }) => {
+const Product = ({ width, height, buttonOff, item, soonPL, soonEN }) => {
   const data = useStaticQuery(graphql`
     query {
       tenfertil: file(name: { eq: "tenfertil" }) {
@@ -113,27 +109,25 @@ const Product = ({ width, height, buttonOff, item }) => {
         height={height}
         className="image"
       />
-      <StyledHeading size="small" className="heading">
-        TENfertil&#8482; ON
-      </StyledHeading>
+      {item.heading}
       <StyledInfo className="info">
         {item.texts.map(text => (
-          <StyledParagraph key={text.text}>{text.text}</StyledParagraph>
+          <p key={text.text}>{text.text}</p>
         ))}
         <StyledBreakLine className="breakline" />
       </StyledInfo>
       <StyledButtons className="buttons">
         {buttonOff ? null : (
-          <Button href={`https://tenfertil.pl`} label="WIĘCEJ O TENFERTIL" />
+          <Button
+            href={item.buttonMorePL.href}
+            label={item.buttonMorePL.label}
+          />
         )}
         {buttonOff ? null : (
-          <Button href={`https://tenfertil.pl/buy`} label="GDZIE KUPIĆ" />
+          <Button href={item.buttonBuyPL.href} label={item.buttonBuyPL.label} />
         )}
       </StyledButtons>
-      <StyledParagraph>
-        Wkrótce będą dostępne na rynku Polskim <strong>TENfertil ONA</strong> i{" "}
-        <strong>TENhair</strong>
-      </StyledParagraph>
+      {soonPL}
     </StyledWrapper>
   )
 }

@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import myTheme from "../../styles/my-theme"
-// import LogoCss from "../logo/logo-css"
 import LogoNhi from "../logo/logo-nhi"
 import { CgSmartphone, CgMail, CgArrowUp } from "react-icons/cg"
 import { Link } from "gatsby"
@@ -19,7 +18,6 @@ const StyledInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin: 0 auto; */
 `
 
 const StyledContactWrapper = styled.div`
@@ -51,10 +49,9 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
-const FooterMobile = ({ number, email, company }) => {
+const FooterMobile = ({ number, email, company, copyrights }) => {
   return (
     <StyledFooterWrapper id="footer">
-      {/* <LogoCss companyName={`Nutrition Health Institute`} /> */}
       <LogoNhi width="300px" />
       <StyledInfoWrapper>
         <StyledContactWrapper>
@@ -71,7 +68,9 @@ const FooterMobile = ({ number, email, company }) => {
         </StyledContactWrapper>
         <StyledText size={myTheme.typography["text-p3"]}>{company}</StyledText>
       </StyledInfoWrapper>
-      <StyledText>© {new Date().getFullYear()} Nhinstitute</StyledText>
+      <StyledText>
+        &copy; {new Date().getFullYear()} {copyrights}
+      </StyledText>
       <StyledLink to={`/`}>
         <CgArrowUp size={`24px`} color={`white`} />
       </StyledLink>

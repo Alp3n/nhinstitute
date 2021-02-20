@@ -30,11 +30,11 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `people`,
-        path: `${__dirname}/src/content/people`,
+        name: `content`,
+        path: `${__dirname}/src/content/`,
       },
     },
-    { resolve: `gatsby-plugin-mdx`, extenstions: [`.mdx`, `.md`] },
+    { resolve: `gatsby-plugin-mdx` },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -58,8 +58,5 @@ module.exports = {
         },
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

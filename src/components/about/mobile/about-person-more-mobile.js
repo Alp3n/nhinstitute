@@ -21,17 +21,16 @@ const StyledInfoWrapper = styled.div`
   border-left: 1px solid ${myTheme.color["blue-1"]};
   padding-left: 10%;
   font-weight: 300;
-  font-size: ${myTheme.typography["text-p"]};
   color: ${myTheme.color["blue-4"]};
   grid-area: info;
 
   @media only screen and (max-width: 1200px) {
-    font-size: 20px;
+    /* font-size: 20px; */
     border: none;
     padding: 0;
   }
   @media only screen and (max-width: 700px) {
-    font-size: 18px;
+    /* font-size: 18px; */
     border: none;
     padding: 0;
   }

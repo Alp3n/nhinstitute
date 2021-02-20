@@ -1,16 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from "react"
 import styled from "styled-components"
 
 import HeaderMobile from "./header/header-mobile"
 import FooterMobile from "./footer/footer-mobile"
 import "./layout.css"
+import { pageData } from "../content/data/page-data"
 
 const StyledBody = styled.div`
   justify-self: center;
@@ -27,9 +21,10 @@ const LayoutMobile = ({ children }) => {
         <main>{children}</main>
       </StyledBody>
       <FooterMobile
-        email={`info@nhinstitute.pl`}
-        number={`+48 666 368 005`}
-        company={`Sp.z o.o. Białozora 9, 02-817 Warszawa, Polska\nKRS: 0000861627. REGON: 38710727.\nNIP: 9512507706.`}
+        email={pageData.footer.email}
+        number={pageData.footer.number}
+        company={pageData.footer.company}
+        copyrights={pageData.footer.copyrights}
       />
     </>
   )

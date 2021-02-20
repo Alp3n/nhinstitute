@@ -72,7 +72,7 @@ const StyledButton = styled.button`
     background-color: grey;
   }
 `
-const ContactForm = () => {
+const ContactForm = ({ form }) => {
   const [isChecked, setChecked] = useState(false)
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
@@ -99,10 +99,9 @@ const ContactForm = () => {
       id="contact"
       onSubmit={() => validateEmail("submit", email)}
       accept-charset="UTF-8"
-      // action="https://www.formbackend.com/f/c5684e63fd8d8083"
       action="https://livedemo.installatron.com/1613723424formtools/process.php"
     >
-      <StyledHeading>Wypełnij formularz, żeby wziąć udział:</StyledHeading>
+      <h2>{form.title}</h2>
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form_tools_initialize_form" value="1" />
       <input type="hidden" name="form_tools_form_id" value="1" />
@@ -111,7 +110,7 @@ const ContactForm = () => {
           type={"text"}
           name={"fullName"}
           id={"fullName"}
-          placeholder={"Imię i nazwisko"}
+          placeholder={form.placeholders.fullName}
           required={true}
           value={fullName}
           onChange={e => setFullName(e.target.value)}
@@ -120,7 +119,7 @@ const ContactForm = () => {
           type={"email"}
           name={"email"}
           id={"email"}
-          placeholder={"E-mail"}
+          placeholder={form.placeholders.email}
           required={true}
           value={email}
           onChange={e => setEmail(e.target.value)}
@@ -130,7 +129,7 @@ const ContactForm = () => {
           type={"phone"}
           name={"phoneNumber"}
           id={"phoneNumber"}
-          placeholder={"Telefon"}
+          placeholder={form.placeholders.phoneNumber}
           required={true}
           value={phone}
           onChange={e => setPhone(e.target.value)}
@@ -144,17 +143,10 @@ const ContactForm = () => {
           required={true}
           onChange={() => setChecked(!isChecked)}
         />
-        <p>
-          Wyrażam zgodę na wykorzystanie i przetwarzanie moich danych osobowych
-          w celu realizacji zamówienia oraz kontaktu ze mną, wraz z przepisami
-          rozporządzenia RODO o ochronie danych osobowych. Oświadczam, że
-          zostałam(em) poinformowana(y) o przysługującym mi prawie dostępu do
-          treści moich danych osobowych ich poprawiania oraz żądania usunięcia,
-          jak również prawa do wycofania zgody w każdym czasie.
-        </p>
+        <p>{form.agreement}</p>
       </StyledLabel>
       <StyledButton type="submit" disabled={!isChecked}>
-        WYŚLIJ
+        {form.buttonSendPL}
       </StyledButton>
     </StyledForm>
   )

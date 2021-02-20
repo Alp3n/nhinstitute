@@ -11,12 +11,11 @@ const StyledWrapper = styled.div`
   justify-content: space-between;
 `
 
-const Contact = props => {
-  console.log(props)
+const Contact = ({ form }) => {
   return (
     <StyledWrapper>
       <ContactImage />
-      <ContactForm />
+      <ContactForm form={form} />
     </StyledWrapper>
   )
 }

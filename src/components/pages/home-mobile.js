@@ -5,7 +5,7 @@ import GalleryMobile from "../gallery/gallery-mobile"
 import Product from "../product/product"
 import ContactForm from "../contact/contact-form"
 
-const HomeMobile = ({ pageData }) => {
+const HomeMobile = ({ pageData, isEn }) => {
   return (
     <>
       <GalleryMobile title={pageData.title.mobile} />
@@ -14,7 +14,7 @@ const HomeMobile = ({ pageData }) => {
         title={pageData.sections.about.title}
         texts={pageData.sections.about.texts}
       >
-        <AboutPersonGalleryMobile />
+        <AboutPersonGalleryMobile isEn={isEn} />
       </Section>
       <Section
         id={pageData.sections.products.id}

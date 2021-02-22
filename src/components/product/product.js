@@ -49,6 +49,11 @@ const StyledWrapper = styled.div`
 const StyledInfo = styled.div`
   display: flex;
   flex-direction: column;
+  font-size: 18px;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 16px;
+  }
 `
 // const StyledParagraph = styled.p`
 //   font-size: ${myTheme.typography["text-p"]};
@@ -136,8 +141,10 @@ const Product = ({ width, height, buttonOff, item, soonPL, soonEN }) => {
           <Button href={item.buttonBuyPL.href} label={item.buttonBuyPL.label} />
         )}
       </StyledButtons>
-      {soonPL}
-      {soonEN}
+      <StyledInfo>
+        {soonPL}
+        {soonEN}
+      </StyledInfo>
     </StyledWrapper>
   )
 }

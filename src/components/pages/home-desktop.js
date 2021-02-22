@@ -6,7 +6,7 @@ import AboutPersonGallery from "../about/desktop/about-person-gallery"
 import Product from "../product/product"
 import Contact from "../contact/Contact"
 
-const HomeDesktop = ({ pageData }) => {
+const HomeDesktop = ({ pageData, isEn }) => {
   return (
     <>
       <GalleryDesktop title={pageData.title.desktop} />
@@ -16,7 +16,7 @@ const HomeDesktop = ({ pageData }) => {
         title={pageData.sections.about.title}
         texts={pageData.sections.about.texts}
       >
-        <AboutPersonGallery />
+        <AboutPersonGallery isEn={isEn} />
       </Section>
       <Section
         id={pageData.sections.products.id}

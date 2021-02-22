@@ -48,7 +48,7 @@ const PersonTitles = styled.span`
 `
 const StyledPersonWrapper = styled.div``
 
-const AboutPerson = ({ setSelectedPerson, person, selectedPerson }) => {
+const AboutPerson = ({ setSelectedPerson, person, selectedPerson, isEn }) => {
   function handleOnClick(person) {
     setSelectedPerson(person)
   }
@@ -61,7 +61,15 @@ const AboutPerson = ({ setSelectedPerson, person, selectedPerson }) => {
         />
         <PersonName size="xsmall">{person.frontmatter.name}</PersonName>
         {selectedPerson === null ? (
-          person.frontmatter.titles.length <= 3 ? (
+          isEn ? (
+            person.frontmatter.titlesEN.length <= 3 ? (
+              person.frontmatter.titlesEN.map((title, index) => (
+                <PersonTitles key={index}>{title}</PersonTitles>
+              ))
+            ) : (
+              <PersonTitles>{`${person.frontmatter.titlesEN}`}</PersonTitles>
+            )
+          ) : person.frontmatter.titles.length <= 3 ? (
             person.frontmatter.titles.map((title, index) => (
               <PersonTitles key={index}>{title}</PersonTitles>
             ))
@@ -75,7 +83,7 @@ const AboutPerson = ({ setSelectedPerson, person, selectedPerson }) => {
         <ScrollArrow direction="-45deg" onClick={() => handleOnClick(person)} />
       ) : (
         <StyledPersonWrapper>
-          <AboutPersonMoreMobile selectedPerson={selectedPerson} />
+          <AboutPersonMoreMobile selectedPerson={selectedPerson} isEn={isEn} />
           <ScrollArrow direction="135deg" onClick={() => handleOnClick(null)} />
         </StyledPersonWrapper>
       )}

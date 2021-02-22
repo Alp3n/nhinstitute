@@ -14,7 +14,7 @@ const StyledPersonGallery = styled.div`
 
 const StyledPersonWrapper = styled.div``
 
-const AboutPersonGallery = () => {
+const AboutPersonGallery = ({ isEn }) => {
   const [selectedPerson, setSelectedPerson] = useState(null)
 
   const data = useStaticQuery(graphql`
@@ -32,7 +32,9 @@ const AboutPersonGallery = () => {
               name
               myid
               titles
+              titlesEN
               texts
+              textsEN
               featuredImage {
                 id
                 childImageSharp {
@@ -57,6 +59,7 @@ const AboutPersonGallery = () => {
               person={person.node}
               setSelectedPerson={setSelectedPerson}
               selectedPerson={selectedPerson}
+              isEn={isEn}
             />
           ))}
         </StyledPersonGallery>
@@ -65,6 +68,7 @@ const AboutPersonGallery = () => {
           <AboutPersonMore
             selectedPerson={selectedPerson}
             setSelectedPerson={setSelectedPerson}
+            isEn={isEn}
           />
         </StyledPersonWrapper>
       )}

@@ -11,7 +11,7 @@ export const pageDataEn = {
       {
         name: (
           <>
-            PL/<strong>EN</strong>
+            PL/<strong style={{ color: "#00B4AA" }}>EN</strong>
           </>
         ),
         href: "/",

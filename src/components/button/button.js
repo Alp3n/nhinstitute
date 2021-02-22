@@ -35,7 +35,7 @@ const StyledButtonHref = styled.a`
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2rem;
-  padding: 1rem 2rem;
+  padding: 0 1rem;
 
   &:hover {
     background-color: ${myTheme.color.button};

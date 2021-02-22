@@ -28,6 +28,8 @@ const StyledInput = styled.input`
   color: ${myTheme.color["blue-4"]};
   border: none;
   border-bottom: 1px solid ${myTheme.color["blue-4"]};
+  border-radius: 0;
+  -webkit-appearance: none;
 
   &:focus {
     background-color: #e8e8e8;
@@ -44,7 +46,9 @@ const StyledInput = styled.input`
   }
 `
 const StyledCheck = styled.input`
-  margin: 3%;
+  margin: 1%;
+  padding: 8px;
+  border: 1px solid ${myTheme.color["blue-4"]};
 `
 
 const StyledButton = styled.button`

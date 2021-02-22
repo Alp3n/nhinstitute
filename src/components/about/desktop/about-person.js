@@ -60,7 +60,7 @@ const StyledButton = styled.button`
   }
 `
 
-const AboutPerson = ({ setSelectedPerson, person, selectedPerson }) => {
+const AboutPerson = ({ setSelectedPerson, person, selectedPerson, isEn }) => {
   function handleOnClick(person) {
     setSelectedPerson(person)
   }
@@ -72,7 +72,15 @@ const AboutPerson = ({ setSelectedPerson, person, selectedPerson }) => {
           image={person.frontmatter.featuredImage.childImageSharp.fluid}
         />
         <PersonName>{person.frontmatter.name}</PersonName>
-        {person.frontmatter.titles.length <= 3 ? (
+        {isEn ? (
+          person.frontmatter.titlesEN.length <= 3 ? (
+            person.frontmatter.titlesEN.map((title, index) => (
+              <PersonTitles key={index}>{title}</PersonTitles>
+            ))
+          ) : (
+            <PersonTitles>{`${person.frontmatter.titlesEN}`}</PersonTitles>
+          )
+        ) : person.frontmatter.titles.length <= 3 ? (
           person.frontmatter.titles.map((title, index) => (
             <PersonTitles key={index}>{title}</PersonTitles>
           ))
@@ -82,12 +90,12 @@ const AboutPerson = ({ setSelectedPerson, person, selectedPerson }) => {
       </AboutPersonWrapper>
       {selectedPerson === null ? (
         <StyledButton onClick={() => handleOnClick(person)} className="button">
-          więcej
+          {isEn ? "more" : "więcej"}
         </StyledButton>
       ) : (
         <StyledButton onClick={() => handleOnClick(null)} className="button">
           <CgArrowLeft color="white" />
-          mniej
+          {isEn ? "less" : "mniej"}
         </StyledButton>
       )}
     </AboutWrapper>

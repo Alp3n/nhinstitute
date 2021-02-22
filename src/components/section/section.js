@@ -25,10 +25,18 @@ const StyledHeading = styled.h1`
   text-transform: uppercase;
   font-weight: lighter;
 
-  /* @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 700px) {
     font-size: 38px;
     font-weight: 300;
-  } */
+  }
+`
+const StyledP = styled.p`
+  font-size: 18px;
+  margin-bottom: 56px;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 16px;
+  }
 `
 
 const Section = ({ id, children, texts, title, className }) => {
@@ -36,7 +44,7 @@ const Section = ({ id, children, texts, title, className }) => {
     <StyledSection id={id} className={className}>
       <StyledHeading>{title}</StyledHeading>
       {texts.map((text, index) => (
-        <p key={index}>{text.text}</p>
+        <StyledP key={index}>{text.text}</StyledP>
       ))}
       {children}
     </StyledSection>

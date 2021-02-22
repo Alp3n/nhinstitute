@@ -38,16 +38,23 @@ const StyledInfoWrapper = styled.div`
 
 const StyledInfo = styled.p``
 
-const AboutPersonMoreMobile = ({ selectedPerson }) => {
+const AboutPersonMoreMobile = ({ selectedPerson, isEn }) => {
   return (
     <StyledWrapper className="aboutperson">
       <StyledInfoWrapper>
-        {selectedPerson.frontmatter.texts.map(text => (
-          <StyledInfo className="info" key={text}>
-            {text}
-            <br />
-          </StyledInfo>
-        ))}
+        {isEn
+          ? selectedPerson.frontmatter.textsEN.map(text => (
+              <StyledInfo className="info" key={text}>
+                {text}
+                <br />
+              </StyledInfo>
+            ))
+          : selectedPerson.frontmatter.texts.map(text => (
+              <StyledInfo className="info" key={text}>
+                {text}
+                <br />
+              </StyledInfo>
+            ))}
       </StyledInfoWrapper>
     </StyledWrapper>
   )

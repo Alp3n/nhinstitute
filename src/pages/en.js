@@ -17,12 +17,12 @@ const IndexPageEn = () => {
       <SEO title="Suplement diety dla mężczyzn starających się o dzieci" />
       {isBigScreen && (
         <LayoutDesktop pageData={pageDataEn}>
-          <HomeDesktop pageData={pageDataEn} />
+          <HomeDesktop pageData={pageDataEn} isEn={true} />
         </LayoutDesktop>
       )}
       {isTabletOrMobile && (
         <LayoutMobile pageData={pageDataEn}>
-          <HomeMobile pageData={pageDataEn} />
+          <HomeMobile pageData={pageDataEn} isEn={true} />
         </LayoutMobile>
       )}
     </>

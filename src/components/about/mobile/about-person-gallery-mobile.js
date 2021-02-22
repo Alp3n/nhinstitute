@@ -14,7 +14,7 @@ const StyledPersonGallery = styled.div`
   }
 `
 
-const AboutPersonGalleryMobile = () => {
+const AboutPersonGalleryMobile = ({ isEn }) => {
   const [selectedPersonRokicki, setSelectedPersonRokicki] = useState(null)
   const [selectedPersonGrodzicka, setSelectedPersonGrodzicka] = useState(null)
   const [selectedPersonWolski, setSelectedPersonWolski] = useState(null)
@@ -30,6 +30,8 @@ const AboutPersonGalleryMobile = () => {
           texts
           title
           titles
+          textsEN
+          titlesEN
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 300) {
@@ -46,8 +48,10 @@ const AboutPersonGalleryMobile = () => {
           name
           slug
           texts
+          textsEN
           title
           titles
+          titlesEN
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 300) {
@@ -66,6 +70,8 @@ const AboutPersonGalleryMobile = () => {
           texts
           title
           titles
+          textsEN
+          titlesEN
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 300) {
@@ -85,18 +91,21 @@ const AboutPersonGalleryMobile = () => {
           person={data.rokicki}
           setSelectedPerson={setSelectedPersonRokicki}
           selectedPerson={selectedPersonRokicki}
+          isEn={isEn}
         />
         <AboutPersonMobile
           key={data.grodzicka.myId}
           person={data.grodzicka}
           setSelectedPerson={setSelectedPersonGrodzicka}
           selectedPerson={selectedPersonGrodzicka}
+          isEn={isEn}
         />
         <AboutPersonMobile
           key={data.wolski.myId}
           person={data.wolski}
           setSelectedPerson={setSelectedPersonWolski}
           selectedPerson={selectedPersonWolski}
+          isEn={isEn}
         />
       </StyledPersonGallery>
     </div>

@@ -18,7 +18,7 @@ const StyledList = styled.ul`
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: lighter;
   color: ${myTheme.color["blue-4"]};
   text-transform: uppercase;
 

@@ -23,26 +23,13 @@ const StyledBox = styled.div`
   margin: 16px 15%;
 `
 
-const HeaderDesktop = () => {
-  // const [isVisible, setVisible] = useState(false)
-  // const openMenu = useMediaQuery({ query: "(max-width: 1630px)" })
-  // const handleClick = () => {
-  //   setVisible(isVisible => !isVisible)
-  // }
-
+const HeaderDesktop = ({ links }) => {
   return (
     <StyledHeader>
       <StyledBox>
         <Logo width="350px" />
-        <Nav flex="flex" />
-        {/* openMenu ? (
-          <MenuButton handleClick={handleClick} isVisible={isVisible} />
-        ) : (
-          <Nav flex="flex" />
-        ) */}
+        <Nav flex="flex" links={links} />
       </StyledBox>
-
-      {/* <Menu isVisible={isVisible} /> */}
     </StyledHeader>
   )
 }

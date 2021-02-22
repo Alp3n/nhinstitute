@@ -2,13 +2,10 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import myTheme from "../../styles/my-theme"
 
-const StyledHeading = styled.h2`
-  font-weight: 400;
-`
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 90%;
   place-self: center;
   @media only screen and (max-width: 1200px) {
     width: 100%;
@@ -77,9 +74,6 @@ const ContactForm = ({ form }) => {
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
-  console.log(fullName)
-  console.log(email)
-  console.log(phone)
 
   function validateEmail(event, value) {
     let error

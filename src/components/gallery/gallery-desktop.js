@@ -7,9 +7,8 @@ import GalleryImage from "./galleryImage"
 const StyledGalleryBig = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* grid-template-columns: repeat(5, minmax(25vh, 30vh)); */
+
   grid-template-rows: repeat(2, 0.6fr);
-  /* grid-template-rows: repeat(2, minmax(10vw, 17vw)); */
   grid-gap: 0.5rem;
   grid-template-areas:
     "img1 img1 img2 img2 img3"
@@ -41,6 +40,7 @@ const StyledGalleryBig = styled.div`
 const StyledHeading = styled.h1`
   font-weight: 400;
   font-size: 3.3vw;
+  text-transform: uppercase;
 `
 
 const StyledP = styled.p`
@@ -53,7 +53,7 @@ const StyledWrapper = styled.div`
   justify-content: space-evenly;
 `
 
-const GalleryDesktop = () => {
+const GalleryDesktop = ({ title }) => {
   const data = useStaticQuery(graphql`
     query ImagesGalleryDesktop {
       imagesBig: allFile(filter: { relativeDirectory: { eq: "jpg" } }) {
@@ -74,12 +74,14 @@ const GalleryDesktop = () => {
     <StyledGalleryBig>
       <StyledWrapper className="title">
         <StyledHeading>
-          ZDROWIE <br />I PŁODNOŚĆ
+          {/* ZDROWIE <br />I PŁODNOŚĆ */}
+          {title.heading}
         </StyledHeading>
         <StyledP>
-          Best people, best products,
+          {/* Best people, best products,
           <br />
-          best opportunities
+          best opportunities */}
+          {title.paragraph}
         </StyledP>
       </StyledWrapper>
       {data.imagesBig.nodes.map(image => (

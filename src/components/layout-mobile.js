@@ -4,7 +4,6 @@ import styled from "styled-components"
 import HeaderMobile from "./header/header-mobile"
 import FooterMobile from "./footer/footer-mobile"
 import "./layout.css"
-import { pageData } from "../content/data/page-data"
 
 const StyledBody = styled.div`
   justify-self: center;
@@ -13,10 +12,10 @@ const StyledBody = styled.div`
   overflow: hidden;
 `
 
-const LayoutMobile = ({ children }) => {
+const LayoutMobile = ({ children, pageData }) => {
   return (
     <>
-      <HeaderMobile />
+      <HeaderMobile links={pageData.navbar.links} />
       <StyledBody>
         <main>{children}</main>
       </StyledBody>

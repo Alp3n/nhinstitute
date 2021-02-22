@@ -3,13 +3,6 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import myTheme from "../../styles/my-theme"
 
-const links = [
-  { href: "#about", name: "O NAS" },
-  { href: "#products", name: "PRODUKTY" },
-  { href: "#cooperation", name: "WSPÓŁPRACA" },
-  { href: "#footer", name: "KONTAKT" },
-]
-
 const StyledList = styled.ul`
   margin: 0;
   line-height: 1.45rem;
@@ -27,6 +20,7 @@ const StyledLink = styled(Link)`
   font-size: 20px;
   font-weight: 400;
   color: ${myTheme.color["blue-4"]};
+  text-transform: uppercase;
 
   &:visited {
     color: ${myTheme.color["blue-4"]};
@@ -47,7 +41,7 @@ const Nav = props => {
   return (
     <nav>
       <StyledList {...props}>
-        {links.map(link => (
+        {props.links.map(link => (
           <StyledListPoint key={link.href}>
             <StyledLink to={link.href}>{link.name}</StyledLink>
           </StyledListPoint>

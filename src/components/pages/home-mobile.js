@@ -1,16 +1,14 @@
 import React from "react"
 import Section from "../section/section"
 import AboutPersonGalleryMobile from "../about/mobile/about-person-gallery-mobile"
-import { pageData } from "../../content/data/page-data"
-
 import GalleryMobile from "../gallery/gallery-mobile"
 import Product from "../product/product"
 import ContactForm from "../contact/contact-form"
 
-const HomeDesktop = () => {
+const HomeMobile = ({ pageData }) => {
   return (
     <>
-      <GalleryMobile />
+      <GalleryMobile title={pageData.title.mobile} />
       <Section
         id={pageData.sections.about.id}
         title={pageData.sections.about.title}
@@ -31,6 +29,7 @@ const HomeDesktop = () => {
             width={`80vw`}
             height={`80vw`}
             soonPL={pageData.sections.products.soonPL}
+            soonEN={pageData.sections.products.soonEN}
           />
         ))}
       </Section>
@@ -45,4 +44,4 @@ const HomeDesktop = () => {
   )
 }
 
-export default HomeDesktop
+export default HomeMobile

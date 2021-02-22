@@ -5,27 +5,28 @@ import LayoutDesktop from "../components/layout-desktop"
 import LayoutMobile from "../components/layout-mobile"
 import HomeDesktop from "../components/pages/home-desktop"
 import HomeMobile from "../components/pages/home-mobile"
-import { pageData } from "../content/data/page-data"
+import { pageDataEn } from "../content/data/page-data-en"
+
 import SEO from "../components/seo"
 
-const IndexPage = () => {
+const IndexPageEn = () => {
   const isBigScreen = useMediaQuery({ query: "(min-width:1201px)" })
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" })
   return (
     <>
       <SEO title="Suplement diety dla mężczyzn starających się o dzieci" />
       {isBigScreen && (
-        <LayoutDesktop pageData={pageData}>
-          <HomeDesktop pageData={pageData} />
+        <LayoutDesktop pageData={pageDataEn}>
+          <HomeDesktop pageData={pageDataEn} />
         </LayoutDesktop>
       )}
       {isTabletOrMobile && (
-        <LayoutMobile pageData={pageData}>
-          <HomeMobile pageData={pageData} />
+        <LayoutMobile pageData={pageDataEn}>
+          <HomeMobile pageData={pageDataEn} />
         </LayoutMobile>
       )}
     </>
   )
 }
 
-export default IndexPage
+export default IndexPageEn

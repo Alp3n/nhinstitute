@@ -2,13 +2,52 @@ import React from "react"
 export const pageData = {
   companyName: "Nutrition Health Institute",
   navbar: {
-    icon: "",
     links: [
       { name: "o nas", href: "#about" },
       { name: "produkty", href: "#products" },
       { name: "współpraca", href: "#cooperation" },
-      { name: "kontakt", href: "#contact" },
+      { name: "kontakt", href: "#footer" },
+      {
+        name: (
+          <>
+            <strong>PL</strong>/EN
+          </>
+        ),
+        href: "/en",
+      },
     ],
+  },
+  title: {
+    desktop: {
+      heading: (
+        <>
+          zdrowie <br />i płodność
+        </>
+      ),
+      paragraph: (
+        <>
+          Best people, best products,
+          <br />
+          best opportunities
+        </>
+      ),
+    },
+    mobile: {
+      heading: (
+        <>
+          zdrowie <br />i płodność
+        </>
+      ),
+      paragraph: (
+        <>
+          Best people,
+          <br />
+          best products,
+          <br />
+          best opportunities
+        </>
+      ),
+    },
   },
   sections: {
     about: {
@@ -36,25 +75,19 @@ export const pageData = {
           i <strong>TENhair</strong>
         </p>
       ),
-      soonEN: (
-        <p>
-          Soon <strong>TENfertil ONA</strong> and <strong>TENhair</strong> will
-          be available on Polish market.
-        </p>
-      ),
       items: [
         {
           id: 1,
           name: "TENfertil ON",
           heading: (
-            <h2>
-              TENfertil<sup>&copy;</sup>ON
-            </h2>
+            <>
+              TENfertil<sup>&reg;</sup>ON
+            </>
           ),
           image: "../../images/png/tenfertil.png",
           buttonMorePL: {
             href: "https://tenfertil.pl",
-            label: "więcej o tenfertil",
+            label: "więcej o tenfertil on",
           },
           buttonBuyPL: {
             href: "https://tenfertil.pl/kup",

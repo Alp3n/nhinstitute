@@ -16,7 +16,7 @@ const StyledHeaderSmall = styled.div`
   z-index: 1000;
 `
 
-const HeaderMobile = () => {
+const HeaderMobile = ({ links }) => {
   const [isVisible, setVisible] = useState(false)
 
   const handleClick = () => {
@@ -30,7 +30,7 @@ const HeaderMobile = () => {
         <MenuButton handleClick={handleClick} isVisible={isVisible} />
       </StyledHeaderSmall>
 
-      <Menu isVisible={isVisible} />
+      <Menu isVisible={isVisible} links={links} />
     </>
   )
 }

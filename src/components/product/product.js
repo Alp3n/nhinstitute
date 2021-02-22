@@ -50,19 +50,20 @@ const StyledInfo = styled.div`
   display: flex;
   flex-direction: column;
 `
-const StyledParagraph = styled.p`
-  font-size: ${myTheme.typography["text-p"]};
-  color: ${myTheme.color["blue-4"]};
-  margin: 2% 0;
-  font-weight: 300;
-  @media only screen and (max-width: 1200px) {
-    font-size: 18px;
-  }
-`
+// const StyledParagraph = styled.p`
+//   font-size: ${myTheme.typography["text-p"]};
+//   color: ${myTheme.color["blue-4"]};
+//   margin: 2% 0;
+//   font-weight: 300;
+//   @media only screen and (max-width: 1200px) {
+//     font-size: 18px;
+//   }
+// `
 
-const StyledHeading = styled.h1`
-  font-weight: 400;
+const StyledHeading = styled.h2`
   @media only screen and (max-width: 1200px) {
+    margin-top: 5%;
+    text-align: center;
     font-size: 38px;
   }
 `
@@ -94,7 +95,14 @@ const Product = ({ width, height, buttonOff, item, soonPL, soonEN }) => {
     query {
       tenfertil: file(name: { eq: "tenfertil" }) {
         childImageSharp {
-          fluid(quality: 1) {
+          fluid(quality: 50) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      tenfertilLogo: file(name: { eq: "logo-small" }) {
+        childImageSharp {
+          fluid(quality: 50) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -109,7 +117,8 @@ const Product = ({ width, height, buttonOff, item, soonPL, soonEN }) => {
         height={height}
         className="image"
       />
-      {item.heading}
+      <StyledHeading>{item.heading}</StyledHeading>
+
       <StyledInfo className="info">
         {item.texts.map(text => (
           <p key={text.text}>{text.text}</p>
@@ -128,6 +137,7 @@ const Product = ({ width, height, buttonOff, item, soonPL, soonEN }) => {
         )}
       </StyledButtons>
       {soonPL}
+      {soonEN}
     </StyledWrapper>
   )
 }

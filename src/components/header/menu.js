@@ -34,7 +34,7 @@ const Menu = (props, { isVisible }) => {
   return (
     <StyledMenuWrapper {...props} className={isVisible ? "opened" : "closed"}>
       <StyledBreak />
-      <Nav />
+      <Nav links={props.links} />
     </StyledMenuWrapper>
   )
 }

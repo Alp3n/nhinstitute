@@ -77,7 +77,6 @@ const AboutPersonGalleryMobile = () => {
       }
     }
   `)
-  console.log(data.rokicki.frontmatter)
   return (
     <div>
       <StyledPersonGallery>

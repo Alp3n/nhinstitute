@@ -23,17 +23,18 @@ const StyledSection = styled.section`
 `
 const StyledHeading = styled.h1`
   text-transform: uppercase;
+  font-weight: lighter;
 
-  @media only screen and (max-width: 700px) {
+  /* @media only screen and (max-width: 700px) {
     font-size: 38px;
     font-weight: 300;
-  }
+  } */
 `
 
 const Section = ({ id, children, texts, title, className }) => {
   return (
     <StyledSection id={id} className={className}>
-      <h1>{title}</h1>
+      <StyledHeading>{title}</StyledHeading>
       {texts.map((text, index) => (
         <p key={index}>{text.text}</p>
       ))}

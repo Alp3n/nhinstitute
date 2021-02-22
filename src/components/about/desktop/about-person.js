@@ -16,7 +16,6 @@ const AboutWrapper = styled.div`
   .button {
     grid-area: button;
   }
-  margin-bottom: 8%;
 `
 
 const AboutPersonWrapper = styled.div`
@@ -27,10 +26,11 @@ const AboutPersonWrapper = styled.div`
 const PersonName = styled.h2`
   margin: 5% 0;
   text-transform: uppercase;
+
+  text-align: center;
 `
 
 const PersonTitles = styled.span`
-  /* font-size: ${myTheme.typography["text-p2"]}; */
   color: ${myTheme.color["blue-4"]};
   text-align: center;
 `

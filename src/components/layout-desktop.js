@@ -6,8 +6,6 @@ import "./layout.css"
 
 import FooterDesktop from "./footer/footer-desktop"
 
-import { pageData } from "../content/data/page-data"
-
 const StyledLayout = styled.div`
   width: 100%;
 `
@@ -18,10 +16,10 @@ const StyledBody = styled.div`
   margin: 36px 15vw;
 `
 
-const LayoutDesktop = ({ children }) => {
+const LayoutDesktop = ({ children, pageData }) => {
   return (
     <StyledLayout>
-      <HeaderDesktop />
+      <HeaderDesktop links={pageData.navbar.links} />
       <StyledBody>
         <main>{children}</main>
       </StyledBody>

@@ -36,6 +36,7 @@ const StyledGallerySmall = styled.div`
 const StyledHeading = styled.h1`
   font-weight: 300;
   font-size: 42px;
+  text-transform: uppercase;
 `
 
 const StyledP = styled.p`
@@ -50,7 +51,7 @@ const StyledWrapper = styled.div`
   margin-top: 16px;
 `
 
-const GalleryMobile = () => {
+const GalleryMobile = ({ title }) => {
   const data = useStaticQuery(graphql`
     query ImagesGalleryMobile {
       imagesSmall: allFile(
@@ -75,14 +76,16 @@ const GalleryMobile = () => {
     <StyledGallerySmall>
       <StyledWrapper className="title">
         <StyledHeading>
-          ZDROWIE <br />I PŁODNOŚĆ
+          {/* ZDROWIE <br />I PŁODNOŚĆ */}
+          {title.heading}
         </StyledHeading>
         <StyledP>
-          Best people,
+          {/* Best people,
           <br />
           best products,
           <br />
-          best opportunities
+          best opportunities */}
+          {title.paragraph}
         </StyledP>
       </StyledWrapper>
       {data.imagesSmall.nodes.map(image => (

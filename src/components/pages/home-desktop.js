@@ -5,41 +5,44 @@ import Section from "../section/section"
 import AboutPersonGallery from "../about/desktop/about-person-gallery"
 import Product from "../product/product"
 import Contact from "../contact/Contact"
+import { pageData } from "../../content/data/page-data"
+import { pageDataEn } from "../../content/data/page-data-en"
 
-const HomeDesktop = ({ pageData, isEn }) => {
+const HomeDesktop = ({ isEn }) => {
+  const myPageData = isEn ? pageDataEn : pageData
   return (
     <>
-      <GalleryDesktop title={pageData.title.desktop} />
+      <GalleryDesktop title={myPageData.title.desktop} />
       <ScrollArrow href={"#about"} direction={"-45deg"} />
       <Section
-        id={pageData.sections.about.id}
-        title={pageData.sections.about.title}
-        texts={pageData.sections.about.texts}
+        id={myPageData.sections.about.id}
+        title={myPageData.sections.about.title}
+        texts={myPageData.sections.about.texts}
       >
         <AboutPersonGallery isEn={isEn} />
       </Section>
       <Section
-        id={pageData.sections.products.id}
-        title={pageData.sections.products.title}
-        texts={pageData.sections.products.texts}
+        id={myPageData.sections.products.id}
+        title={myPageData.sections.products.title}
+        texts={myPageData.sections.products.texts}
       >
-        {pageData.sections.products.items.map(item => (
+        {myPageData.sections.products.items.map(item => (
           <Product
             key={item.id}
             item={item}
             width={`25vw`}
             height={`25vw`}
-            soonPL={pageData.sections.products.soonPL}
-            soonEN={pageData.sections.products.soonEN}
+            soonPL={myPageData.sections.products.soonPL}
+            soonEN={myPageData.sections.products.soonEN}
           />
         ))}
       </Section>
       <Section
-        id={pageData.sections.cooperation.id}
-        title={pageData.sections.cooperation.title}
-        texts={pageData.sections.cooperation.texts}
+        id={myPageData.sections.cooperation.id}
+        title={myPageData.sections.cooperation.title}
+        texts={myPageData.sections.cooperation.texts}
       >
-        <Contact form={pageData.form} />
+        <Contact form={myPageData.form} />
       </Section>
     </>
   )

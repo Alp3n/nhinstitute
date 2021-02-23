@@ -23,14 +23,13 @@ const StyledInfoWrapper = styled.div`
   font-weight: 300;
   color: ${myTheme.color["blue-4"]};
   grid-area: info;
-
+  font-size: 22px;
   @media only screen and (max-width: 1200px) {
-    /* font-size: 20px; */
     border: none;
     padding: 0;
+    font-size: 18px;
   }
   @media only screen and (max-width: 700px) {
-    /* font-size: 18px; */
     border: none;
     padding: 0;
   }

@@ -2,7 +2,6 @@ import React from "react"
 export const pageDataEn = {
   companyName: "Nutrition Health Institute",
   navbar: {
-    icon: "",
     links: [
       { name: "about us", href: "#about" },
       { name: "products", href: "#products" },
@@ -59,7 +58,7 @@ export const pageDataEn = {
       texts: [
         {
           text:
-            "Nutrition Health Institute – company that concentrates on developing and manufacturing the newest generation multi-component pharmaceutical products, both for men and women that would like to fulfill their biggest dream – become happy parents. Diagnosed infertility very often becomes the main focus of life that is hard to accept and deal with. NHI manufactures and sells innovative and the best in its class products in an area of men and women’s health, with the task of making such couples happy. Our team are the best specialists - Dr n. med. Tomasz Rokicki, Dr Jan Karol Wolski i Adriana Grodzicka.",
+            "Nutrition Health Institute – company that concentrates on developing and manufacturing the newest generation multi-component pharmaceutical products, both for men and women that would like to fulfill their biggest dream – become happy parents. Diagnosed infertility very often becomes the main focus of life that is hard to accept and deal with. Nutrition Health Institute manufactures and sells innovative and the best in its class products in an area of men's and women’s health, with the task of making such couples happy. Our team are the best specialists - Dr Tomasz Rokicki, Dr Jan Karol Wolski and Adriana Grodzicka.",
         },
       ],
     },
@@ -69,7 +68,7 @@ export const pageDataEn = {
       texts: [
         {
           text:
-            "Our products has been developed after many years of research conducted by eminent polish specialists working in the best clinics dealing with infertility treatment in cooperation with academic community, health service workers as well as patients. Our supplements meet the highest quality standards, they are safe and their main function is helping patients seeking pregnancy in making their dreams come true.",
+            "Our products has been developed after many years of research conducted by eminent Polish specialists working in the best clinics dealing with infertility treatment in cooperation with academic community, health service workers as well as patients. Our supplements meet the highest quality standards, they are safe and their main function is helping patients seeking pregnancy in making their dreams come true.",
         },
       ],
       soonEN: (
@@ -93,7 +92,7 @@ export const pageDataEn = {
             label: "about tenfertil on",
           },
           buttonBuyPL: {
-            href: "https://tenfertil.pl/kup",
+            href: "https://tenfertil.pl/buy",
             label: "where to buy",
           },
           texts: [
@@ -132,13 +131,13 @@ export const pageDataEn = {
     formURL: "",
     title: "Complete the form to take part",
     placeholders: {
-      fullName: "Name and surname",
+      fullName: "First name and last name",
       email: "E-mail",
       phoneNumber: "Phone number",
     },
     buttonSendPL: "send",
     agreement:
-      "I consent to the use and processing of my personal data for the purpose of completing the order and contact with me in accordance with the provisions of the GDPR regulation on the protection of personal data. I declare that I have been informed about my right to access my personal data, correct it and request removal, as well as the right to withdraw my consent at any time.",
+      "I consent to the use and processing of my personal data for the purpose of completing the order and contacting with me in accordance with the provisions of the GDPR regulation on the protection of personal data. I declare that I have been informed about my right to access my personal data, correct it and request removal, as well as the right to withdraw my consent at any time.",
   },
   footer: {
     id: "footer",
@@ -146,7 +145,7 @@ export const pageDataEn = {
     number: "+48 666 368 005",
     email: "info@nhinstitute.pl",
     company:
-      "Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska\nKRS: 0000861627\nREGON: 38710727\nNIP: 9512507706",
+      "Nutrition Health Institute Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska\nKRS: 0000861627\nREGON: 38710727\nNIP: 9512507706",
     copyrights: "Nutrition Health Institute",
   },
 }

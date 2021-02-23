@@ -6,7 +6,6 @@ import Img from "gatsby-image"
 const circles = [
   {
     color: myTheme.color["portrait-1"],
-    // left: "-30px",
     left: "-10%",
     height: "100%",
     width: "100%",
@@ -15,7 +14,6 @@ const circles = [
   {
     color: myTheme.color["portrait-2"],
     left: "3.3%",
-    // left: "10px",
     height: "100%",
     width: "100%",
     zIndex: 2,
@@ -23,7 +21,6 @@ const circles = [
   {
     color: myTheme.color["portrait-3"],
     left: "-3.3%",
-    // left: "-10px",
     height: "90%",
     width: "90%",
     zIndex: 3,

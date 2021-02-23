@@ -26,9 +26,8 @@ const AboutPersonWrapper = styled.div`
 `
 const PersonName = styled.h2`
   margin: 5% 0;
-  font-weight: 400;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 22px;
   line-height: normal;
 `
 
@@ -60,23 +59,15 @@ const AboutPerson = ({ setSelectedPerson, person, selectedPerson, isEn }) => {
           image={person.frontmatter.featuredImage.childImageSharp.fluid}
         />
         <PersonName size="xsmall">{person.frontmatter.name}</PersonName>
-        {selectedPerson === null ? (
-          isEn ? (
-            person.frontmatter.titlesEN.length <= 3 ? (
-              person.frontmatter.titlesEN.map((title, index) => (
+        {selectedPerson === null
+          ? isEn
+            ? person.frontmatter.titlesEN.map((title, index) => (
                 <PersonTitles key={index}>{title}</PersonTitles>
               ))
-            ) : (
-              <PersonTitles>{`${person.frontmatter.titlesEN}`}</PersonTitles>
-            )
-          ) : person.frontmatter.titles.length <= 3 ? (
-            person.frontmatter.titles.map((title, index) => (
-              <PersonTitles key={index}>{title}</PersonTitles>
-            ))
-          ) : (
-            <PersonTitles>{`${person.frontmatter.titles}`}</PersonTitles>
-          )
-        ) : null}
+            : person.frontmatter.titles.map((title, index) => (
+                <PersonTitles key={index}>{title}</PersonTitles>
+              ))
+          : null}
       </AboutPersonWrapper>
 
       {selectedPerson === null ? (

@@ -26,15 +26,14 @@ const StyledBreak = styled.div`
   @media only screen and (min-width: 1201px) {
     margin: 0;
     margin-right: 1rem;
-    /* width: auto; */
   }
 `
 
-const Menu = (props, { isVisible }) => {
+const Menu = (props, { isVisible, setVisible }) => {
   return (
     <StyledMenuWrapper {...props} className={isVisible ? "opened" : "closed"}>
       <StyledBreak />
-      <Nav links={props.links} />
+      <Nav isEn={props.isEn} setVisible={setVisible} />
     </StyledMenuWrapper>
   )
 }

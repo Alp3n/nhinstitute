@@ -21,14 +21,18 @@ const StyledBox = styled.div`
   align-items: center;
   width: 100%;
   margin: 16px 15%;
+
+  @media only screen and (max-width: 1370px) {
+    margin: 16px 8vw;
+  }
 `
 
-const HeaderDesktop = ({ links }) => {
+const HeaderDesktop = ({ isEn }) => {
   return (
     <StyledHeader>
       <StyledBox>
         <Logo width="350px" />
-        <Nav flex="flex" links={links} />
+        <Nav flex="flex" isEn={isEn} />
       </StyledBox>
     </StyledHeader>
   )

@@ -5,7 +5,6 @@ import LayoutDesktop from "../components/layout-desktop"
 import LayoutMobile from "../components/layout-mobile"
 import HomeDesktop from "../components/pages/home-desktop"
 import HomeMobile from "../components/pages/home-mobile"
-import { pageData } from "../content/data/page-data"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -13,15 +12,15 @@ const IndexPage = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" })
   return (
     <>
-      <SEO title="Suplement diety dla mężczyzn starających się o dzieci" />
+      <SEO title="Suplementy diety dla par starających się o dzieci." />
       {isBigScreen && (
-        <LayoutDesktop pageData={pageData}>
-          <HomeDesktop pageData={pageData} />
+        <LayoutDesktop>
+          <HomeDesktop />
         </LayoutDesktop>
       )}
       {isTabletOrMobile && (
-        <LayoutMobile pageData={pageData}>
-          <HomeMobile pageData={pageData} />
+        <LayoutMobile>
+          <HomeMobile />
         </LayoutMobile>
       )}
     </>

@@ -5,7 +5,6 @@ import styled from "styled-components"
 
 const StyledImg = styled(Img)`
   width: ${props => props.width};
-  /* height: auto; */
 `
 
 const LogoNhi = props => {

@@ -90,7 +90,7 @@ export const pageData = {
             label: "więcej o tenfertil on",
           },
           buttonBuyPL: {
-            href: "https://tenfertil.pl/kup",
+            href: "https://tenfertil.pl/buy",
             label: "gdzie kupić",
           },
           texts: [
@@ -143,7 +143,7 @@ export const pageData = {
     number: "+48 666 368 005",
     email: "info@nhinstitute.pl",
     company:
-      "Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska\nKRS: 0000861627\nREGON: 38710727\nNIP: 9512507706",
+      "Nutrition Health Institute Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska\nKRS: 0000861627\nREGON: 38710727\nNIP: 9512507706",
     copyrights: "Nutrition Health Institute",
   },
 }

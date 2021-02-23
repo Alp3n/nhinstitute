@@ -73,16 +73,8 @@ const GalleryDesktop = ({ title }) => {
   return (
     <StyledGalleryBig>
       <StyledWrapper className="title">
-        <StyledHeading>
-          {/* ZDROWIE <br />I PŁODNOŚĆ */}
-          {title.heading}
-        </StyledHeading>
-        <StyledP>
-          {/* Best people, best products,
-          <br />
-          best opportunities */}
-          {title.paragraph}
-        </StyledP>
+        <StyledHeading>{title.heading}</StyledHeading>
+        <StyledP>{title.paragraph}</StyledP>
       </StyledWrapper>
       {data.imagesBig.nodes.map(image => (
         <GalleryImage

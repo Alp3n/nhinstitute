@@ -26,7 +26,6 @@ const AboutPersonWrapper = styled.div`
 const PersonName = styled.h2`
   margin: 5% 0;
   text-transform: uppercase;
-
   text-align: center;
 `
 
@@ -72,21 +71,13 @@ const AboutPerson = ({ setSelectedPerson, person, selectedPerson, isEn }) => {
           image={person.frontmatter.featuredImage.childImageSharp.fluid}
         />
         <PersonName>{person.frontmatter.name}</PersonName>
-        {isEn ? (
-          person.frontmatter.titlesEN.length <= 3 ? (
-            person.frontmatter.titlesEN.map((title, index) => (
+        {isEn
+          ? person.frontmatter.titlesEN.map((title, index) => (
               <PersonTitles key={index}>{title}</PersonTitles>
             ))
-          ) : (
-            <PersonTitles>{`${person.frontmatter.titlesEN}`}</PersonTitles>
-          )
-        ) : person.frontmatter.titles.length <= 3 ? (
-          person.frontmatter.titles.map((title, index) => (
-            <PersonTitles key={index}>{title}</PersonTitles>
-          ))
-        ) : (
-          <PersonTitles>{`${person.frontmatter.titles}`}</PersonTitles>
-        )}
+          : person.frontmatter.titles.map((title, index) => (
+              <PersonTitles key={index}>{title}</PersonTitles>
+            ))}
       </AboutPersonWrapper>
       {selectedPerson === null ? (
         <StyledButton onClick={() => handleOnClick(person)} className="button">

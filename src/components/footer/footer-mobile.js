@@ -49,7 +49,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
-const FooterMobile = ({ number, email, company, copyrights }) => {
+const FooterMobile = ({ number, email, company, copyrights, isEn }) => {
   return (
     <StyledFooterWrapper id="footer">
       <LogoNhi width="300px" />
@@ -71,7 +71,7 @@ const FooterMobile = ({ number, email, company, copyrights }) => {
       <StyledText>
         &copy; {new Date().getFullYear()} {copyrights}
       </StyledText>
-      <StyledLink to={`/`}>
+      <StyledLink to={isEn ? `/en` : `/`}>
         <CgArrowUp size={`24px`} color={`white`} />
       </StyledLink>
     </StyledFooterWrapper>

@@ -11,6 +11,9 @@ const StyledScrollArrowWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 5%;
+  @media only screen and (max-width: 1200px) {
+    margin-bottom: 0;
+  }
 `
 
 const StyledScrollArrowLink = styled(Link)`

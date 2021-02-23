@@ -73,64 +73,58 @@ const StyledButton = styled.button`
     background-color: grey;
   }
 `
+const StyledH3 = styled.h3`
+  font-weight: lighter;
+`
+
 const ContactForm = ({ form }) => {
   const [isChecked, setChecked] = useState(false)
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
 
-  function validateEmail(event, value) {
-    let error
-    if (!value) {
-      error = "Wpisz email"
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-      error = "Niewłaściwy e-mail"
-    }
-    event.preventDefault()
-
-    return error
-  }
-
   return (
     <StyledForm
       method="post"
       id="contact"
-      onSubmit={() => validateEmail("submit", email)}
       accept-charset="UTF-8"
-      action="https://livedemo.installatron.com/1613723424formtools/process.php"
+      action="https://formularze.nhinstitute.pl/formularze/process.php"
     >
-      <h2>{form.title}</h2>
-      <input type="hidden" name="bot-field" />
-      <input type="hidden" name="form_tools_initialize_form" value="1" />
+      <StyledH3>{form.title}</StyledH3>
       <input type="hidden" name="form_tools_form_id" value="1" />
       <div>
         <StyledInput
-          type={"text"}
-          name={"fullName"}
-          id={"fullName"}
+          type="text"
+          name="fullName"
+          id="fullName"
+          minLength="3"
           placeholder={form.placeholders.fullName}
           required={true}
           value={fullName}
           onChange={e => setFullName(e.target.value)}
         />
         <StyledInput
-          type={"email"}
-          name={"email"}
-          id={"email"}
+          type="email"
+          name="email"
+          id="email"
+          minLength="6"
           placeholder={form.placeholders.email}
           required={true}
           value={email}
           onChange={e => setEmail(e.target.value)}
           className="email"
+          pattern=".+@.+\..+"
         />
         <StyledInput
-          type={"phone"}
-          name={"phoneNumber"}
-          id={"phoneNumber"}
+          type="text"
+          name="phoneNumber"
+          id="phoneNumber"
           placeholder={form.placeholders.phoneNumber}
           required={true}
           value={phone}
           onChange={e => setPhone(e.target.value)}
+          minLength="9"
+          pattern="^\+?[0-9]+"
         />
       </div>
       <StyledLabel>

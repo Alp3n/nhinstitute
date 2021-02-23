@@ -10,6 +10,11 @@ const StyledImg = styled(Img)`
   width: ${props => props.width};
   height: ${props => props.height};
   place-self: center;
+
+  @media only screen and (max-width: 700px) {
+    width: 300px;
+    height: 300px;
+  }
 `
 
 const StyledWrapper = styled.div`
@@ -49,21 +54,12 @@ const StyledWrapper = styled.div`
 const StyledInfo = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 18px;
+  font-size: 22px;
 
   @media only screen and (max-width: 700px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `
-// const StyledParagraph = styled.p`
-//   font-size: ${myTheme.typography["text-p"]};
-//   color: ${myTheme.color["blue-4"]};
-//   margin: 2% 0;
-//   font-weight: 300;
-//   @media only screen and (max-width: 1200px) {
-//     font-size: 18px;
-//   }
-// `
 
 const StyledHeading = styled.h2`
   @media only screen and (max-width: 1200px) {

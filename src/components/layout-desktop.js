@@ -5,6 +5,7 @@ import HeaderDesktop from "./header/header-desktop"
 import "./layout.css"
 
 import FooterDesktop from "./footer/footer-desktop"
+import { pageData } from "../content/data/page-data"
 
 const StyledLayout = styled.div`
   width: 100%;
@@ -14,12 +15,16 @@ const StyledBody = styled.div`
   display: flex;
   flex-direction: column;
   margin: 36px 15vw;
+
+  @media only screen and (max-width: 1370px) {
+    margin: 36px 8vw;
+  }
 `
 
-const LayoutDesktop = ({ children, pageData }) => {
+const LayoutDesktop = ({ children, isEn }) => {
   return (
     <StyledLayout>
-      <HeaderDesktop links={pageData.navbar.links} />
+      <HeaderDesktop isEn={isEn} />
       <StyledBody>
         <main>{children}</main>
       </StyledBody>

@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import myTheme from "../../styles/my-theme"
+import { pageData } from "../../content/data/page-data"
+import { pageDataEn } from "../../content/data/page-data-en"
 
 const StyledList = styled.ul`
   margin: 0;
@@ -37,15 +39,21 @@ const StyledListPoint = styled.li`
   margin-left: 20px;
 `
 
-const Nav = props => {
+const Nav = ({ isEn }) => {
   return (
     <nav>
-      <StyledList {...props}>
-        {props.links.map(link => (
-          <StyledListPoint key={link.href}>
-            <StyledLink to={link.href}>{link.name}</StyledLink>
-          </StyledListPoint>
-        ))}
+      <StyledList>
+        {isEn
+          ? pageDataEn.navbar.links.map(link => (
+              <StyledListPoint key={link.href}>
+                <StyledLink to={link.href}>{link.name}</StyledLink>
+              </StyledListPoint>
+            ))
+          : pageData.navbar.links.map(link => (
+              <StyledListPoint key={link.href}>
+                <StyledLink to={link.href}>{link.name}</StyledLink>
+              </StyledListPoint>
+            ))}
       </StyledList>
     </nav>
   )

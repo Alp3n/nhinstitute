@@ -19,6 +19,7 @@ const StyledInfoWrapper = styled.div`
   padding-left: 10%;
   color: ${myTheme.color["blue-4"]};
   grid-area: info;
+  font-size: 22px;
 `
 
 const StyledInfo = styled.p``

@@ -34,13 +34,6 @@ module.exports = {
         path: `${__dirname}/src/content/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/locales`,
-        name: `locales`,
-      },
-    },
     { resolve: `gatsby-plugin-mdx` },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

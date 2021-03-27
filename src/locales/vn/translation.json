@@ -1,0 +1,150 @@
+{
+  "companyName": "Nutrition Health Institute",
+  "navbar": {
+    "links": [
+      { "name": "thông tin về chúng tôi", "href": "#about" },
+      { "name": "SẢN PHẨM", "href": "#products" },
+      { "name": "Hợp tác", "href": "#cooperation" },
+      { "name": "Liên hệ", "href": "#footer" }
+    ]
+  },
+  "title": {
+    "desktop": {
+      "heading": "sức khỏe\nvà sinh sản",
+      "paragraph": "Best people, best products,\nbest opportunities"
+    },
+    "mobile": {
+      "heading": "sức khỏe\nvà sinh sản",
+      "paragraph": "Best people,\nbest products,\nbest opportunities"
+    }
+  },
+  "sections": {
+    "about": {
+      "id": "about",
+      "title": "thông tin về chúng tôi",
+      "texts": [
+        {
+          "text": "Nutrition Health Institute – là công ty chuyên sâu về phát triển và sản xuất những dòng sản phẩm được chế tạo ra từ các nguyên dược liệu mới nhất, dành cho nữ và nam với ước mơ được làm bố, mẹ. Vô sinh dần trở thành nội dung chính của cuộc sống, mà rất khó để đối mặt và giải quyết. Nutrition Health Instutute sản xuất và phân phối sản phẩm chất lượng tốt nhất dành cho sức khỏe của nam và nữ, giúp cho những cặp đôi này hạnh phúc hơn. Công ty của chúng tôi gồm các chuyên gia giỏi hàng đầu Ba Lan - Tiến sĩ Tomasz Rokicki, tiễn sĩ Jan Karol Wolski và nhà tư vấn Adriana Grodzicka."
+        }
+      ]
+    },
+    "products": {
+      "id": "products",
+      "title": "SẢN PHẨM",
+      "texts": [
+        {
+          "text": "Các sản phẩm của chúng tôi được phát triển dựa trên nhiều năm nghiên cứu thực hiện bởi các chuyên gia Ba Lan xuất sắc làm việc tại các phòng khám tốt nhất về điều trị vô sinh với sự hợp tác của các chuyên gia chăm sóc sức khỏe và bệnh nhân. Các chất bổ sung trong thực phẩm chức năng đáp ứng tiêu chuẩn chất lượng cao nhất, an toàn và nhiệm vụ chính của chúng là giúp những bệnh nhân đang tìm kiếm con cái thực hiện được mong muốn."
+        }
+      ],
+      "soon": "Không lâu nữa trên thị trường Ba Lan <strong>TENfertil ONA</strong> và <strong>Tenhair</strong>.",
+      "items": [
+        {
+          "id": 1,
+          "name": "TENfertil ON",
+          "heading": "TENfertil ON",
+          "image": "../../images/png/tenfertil.png",
+          "buttonMore": {
+            "href": "https://tenfertil.pl",
+            "label": "tìm hiểu thêm về TENfertilOn"
+          },
+          "buttonBuy": {
+            "href": "https://tenfertil.pl/buy",
+            "label": "nơi để mua"
+          },
+          "texts": [
+            {
+              "text": "Thành phần của TENfertil ON và liều lượng sử dụng đã được phát triển trên cơ sở nhiều năm kinh nghiệm của các chuyên gia làm việc tại các phòng khám hàng đầu Ba Lan và điều trị vô sinh, dựa trên kiến thức y khoa mới nhất và hướng dẫn của các xã hội khoa học về sinh sản ở con người."
+            },
+            {
+              "text": "TENfertil ON có thể được sử dụng bởi những người đàn ông đang cố gắng để có con. Nó đặc biệt được khuyến khích cho những người đàn ông bị giảm số lượng tính trùng."
+            },
+            {
+              "text": "Thời gian sử dụng thực phẩm chức năng không được ít hơn 3 tháng. Nên dùng TENfertil ON trong suốt thời gian cố gắng có con và điều trị vô sinh."
+            }
+          ]
+        }
+      ]
+    },
+    "cooperation": {
+      "id": "cooperation",
+      "title": "Hợp tác",
+      "texts": [
+        {
+          "text": "Các chuyên gia chăm sóc sức khỏe, với tư cách là những người quan trọng nhất tiếp xúc với bệnh nhân, có kiến thức chuyên môn vô giá về kết quả của bệnh nhân và cách chống lại bệnh. Điều này đóng một vai trò quan trọng trong việc tăng mức độ chăm sóc bệnh nhân, nâng cao liệu pháp và cải thiện kết quả điều trị."
+        },
+        {
+          "text": "Sự hợp tác hiện đang dựa trên các thử nghiệm lâm sàng. Các bác sĩ điều trị và các chuyên gia chăm sóc sức khỏe đang thực hiện các thử nghiệm lâm sàng tại các trung tâm nghiên cứu theo quy trình thử nghiệm lâm sàng đã được cơ quan y tế và các ủy ban phê duyệt."
+        }
+      ]
+    }
+  },
+  "form": {
+    "formURL": "",
+    "title": "Điền vào biểu mẫu để tham gia",
+    "placeholders": {
+      "fullName": "Tên và họ",
+      "email": "E-mail",
+      "phoneNumber": "Số điện thoại"
+    },
+    "buttonSendPL": "gửi",
+    "agreement": "Tôi đồng ý sử dụng và xử lý dữ liệu cá nhân cho mục đích hoàn thành đơn đặt hàng và liên hệ với tôi, cùng với các quy định của GDPR để bảo vệ dữ liệu cá nhân. Tôi tuyên bố rằng tôi đã được thông báo về quyền truy cập dữ liệu cá nhân của mình, sửa và yêu cầu xóa, cũng như quyền rút lại sự đồng ý của tôi bất kỳ lúc nào."
+  },
+  "footer": {
+    "id": "footer",
+    "logo": "url",
+    "number": "+48 666 368 005",
+    "email": "info@nhinstitute.pl",
+    "company": "Nutrition Health Institute Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska\nKRS: 0000861627\nREGON: 38710727\nNIP: 9512507706",
+    "copyrights": "Nutrition Health Institute"
+  },
+  "people": {
+    "rokicki": {
+      "myid": 1,
+      "slug": "people/rokicki",
+      "name": "Tomasz Rokicki",
+      "featuredImage": "../../images/portrait/p1rokicki.jpg",
+      "titles": [
+        "Giáo sư,",
+        "\nTiến sĩ Y Khoa,",
+        "\nBác sĩ chuyên khoa sản - phụ"
+      ],
+      "texts": [
+        "Doctor of Medical Science, an expert obstetrician-gynecologist, Alumni of Medical University of Warsaw, assistant professor at the Department of Gynaecology and Obstetrics at the Medical University of Warsaw. ",
+        "Since 2002 founder and General Manager of Fertility Clinics - Invimed in Warsaw. He is the author of a number of publications on fertility. ",
+        "Member of many Polish and foreign scientific societies. He is also a creator of e-owulacja programme and a website www.e-owulacja.pl. "
+      ]
+    },
+    "grodzicka": {
+      "myid": 2,
+      "slug": "people/grodzicka",
+      "name": "Adriana Grodzicka",
+      "featuredImage": "../../images/portrait/p2grodzicka.jpg",
+      "titles": ["Chủ tịch hội đồng quản trị"],
+      "texts": [
+        "A graduate at Law and Administration Department of Warsaw University. She has a long work experience in pharmaceutical industry. She has worked in global pharma brands both in the innovative as well as generic medicine segment. ",
+        "Now the Chairman of the Board of Nutrition Health Institute. She is responsible for planning and implementation of the company's strategy as well as adapting to the changing environment. ",
+        "She manages areas of marketing, sales and distribution. "
+      ]
+    },
+    "wolski": {
+      "myid": 3,
+      "slug": "people/wolski",
+      "name": "Jan Karol Wolski",
+      "featuredImage": "../../images/portrait/p3wolski.jpg",
+      "titles": [
+        "Giáo Sư, bác sĩ chuyên khoa tiết niệu, FEBU 4860,",
+        "\nBác sĩ chuyên khoa phẫu thuật nhi",
+        "\nBác sĩ chuyên khoa tiết niệu nhi",
+        "\nBác sĩ nam khoa, đạt chứng chỉ PTA"
+      ],
+      "texts": [
+        "Expert Urologist, FEBU 4860, Pediatric Surgeon Specialist, Children's Urlog Specialist, Andrologist in Clinical hospitals, PSA Certificate (Polish Society of Allergology ), Alumni of the Second Medical Department of Medical Academy in Warsaw in 1981 (now Medical University). He gained experience in The Children’s Memorial Health Institute, Międzylesie Specialist Hospital in Warsaw, National Cancer Centre and scholarships in Germany. ",
+        "He has been working as an andrologist since 1989. Since 1995 he has been the main consultant of andrology and urology in nOvum Clinic in Warsaw where as a pioneer in Poland has introduced testicular biopsy (percutaneous in 1996 and with the use of surgical microscope in 2012). ",
+        "Winner of numerous prizes: Polish Society of Paediatric Surgeons (1988), American Society of Andrology(1977), Scientific Committee of Children’s Health Institute (2020), Polish Urologist Society (2002, 2014, 2015). ",
+        "Lecturer on courses in Postgraduate Studies Medical Centre, Medical University of Warsaw, Polish Society of Andrology, SWPS University. ",
+        "Author and co-author of over 250 scientific papers. "
+      ]
+    }
+  },
+  "more": "hơn"
+}

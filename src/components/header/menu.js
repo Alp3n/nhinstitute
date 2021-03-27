@@ -30,12 +30,12 @@ const StyledBreak = styled.div`
   }
 `
 
-const Menu = (props, { isVisible, setVisible }) => {
+const Menu = (props, { isVisible, setMenu }) => {
   return (
     <StyledMenuWrapper {...props} className={isVisible ? "opened" : "closed"}>
       <StyledBreak />
-      <Nav isEn={props.isEn} setVisible={setVisible} />
-      <LanguageSwitcher />
+      <Nav setMenu={setMenu} />
+      <LanguageSwitcher setMenu={setMenu} />
     </StyledMenuWrapper>
   )
 }

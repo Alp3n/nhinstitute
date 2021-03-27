@@ -1,1 +1,1 @@
-import "fontsource-lato"
+import "fontsource-lato/latin.css"

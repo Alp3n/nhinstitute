@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+
+import { CgChevronDown, CgChevronUp } from "react-icons/cg"
 
 const Button = styled.button`
   border: none;
@@ -9,6 +11,7 @@ const Button = styled.button`
   background-color: transparent;
   color: #151070;
   font-size: 20px;
+  text-transform: uppercase;
 `
 const Wrapper = styled.div`
   .selected {
@@ -21,20 +24,39 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 1200px) {
-    text-align: center;
+    padding: 0;
+    margin-left: 20px;
+    /* text-align: center; */
   }
+`
+const StyledP = styled.p`
+  font-weight: bold;
+  color: #00b4aa;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 0;
+`
+
+const DisplayText = styled.button`
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
 `
 
 const LanguageSwitcher = () => {
+  const [open, setOpen] = useState()
   const { i18n } = useTranslation()
   const languages = [
-    { code: "pl", label: "PL" },
-    { code: "en", label: "EN" },
-    { code: "vn", label: "VN" },
+    { code: "pl", label: "pl" },
+    { code: "en", label: "en" },
+    { code: "vn", label: "vn" },
   ]
 
   const handleChangeLanguage = lng => {
     i18n.changeLanguage(lng)
+    setOpen(false)
   }
 
   const renderLanguageChoice = ({ code, label }) => {
@@ -51,7 +73,19 @@ const LanguageSwitcher = () => {
 
   return (
     <Wrapper>
-      {languages.map(language => renderLanguageChoice(language))}
+      {open ? null : (
+        <DisplayText
+          onClick={() => {
+            setOpen(true)
+          }}
+        >
+          <StyledP>{i18n.language}</StyledP>
+          <CgChevronDown />
+        </DisplayText>
+      )}
+      {open
+        ? languages.map(language => <div>{renderLanguageChoice(language)}</div>)
+        : null}
     </Wrapper>
   )
 }

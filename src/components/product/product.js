@@ -5,6 +5,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Button from "../button/button"
 import myTheme from "../../styles/my-theme"
 
+import { Trans, useTranslation } from "react-i18next"
+
 const StyledImg = styled(Img)`
   margin-bottom: 4vh;
   width: ${props => props.width};
@@ -62,6 +64,7 @@ const StyledInfo = styled.div`
 `
 
 const StyledHeading = styled.h2`
+  font-weight: bold;
   @media only screen and (max-width: 1200px) {
     margin-top: 5%;
     text-align: center;
@@ -91,7 +94,22 @@ const StyledButtons = styled.div`
   }
 `
 
+const StyledLine = styled.div`
+  display: flex;
+  font-size: 22px;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 18px;
+  }
+
+  strong {
+    margin: 0 4px 0 4px;
+  }
+`
+
 const Product = ({ width, height, item, soon }) => {
+  const { t } = useTranslation()
+
   const data = useStaticQuery(graphql`
     query {
       tenfertil: file(name: { eq: "tenfertil" }) {
@@ -131,7 +149,13 @@ const Product = ({ width, height, item, soon }) => {
 
         <Button href={item.buttonBuy.href} label={item.buttonBuy.label} />
       </StyledButtons>
-      <StyledInfo>{soon}</StyledInfo>
+      <StyledLine>
+        <Trans
+          i18nKey="sections.products.soon"
+          defaults="Wkrótce będę dostępne na rynku Polskim {{ tenfertil }} i {{ tenhair }}"
+          values={{ tenfertil: "TENfertil ONA", tenhair: "TENhair" }}
+        />
+      </StyledLine>
     </StyledWrapper>
   )
 }

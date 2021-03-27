@@ -23,12 +23,12 @@ const StyledSection = styled.section`
 `
 const StyledHeading = styled.h1`
   text-transform: uppercase;
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 56px;
 
   @media only screen and (max-width: 700px) {
     font-size: 38px;
-    font-weight: 300;
+    font-weight: 400;
   }
 `
 const StyledP = styled.p`

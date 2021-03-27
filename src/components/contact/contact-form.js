@@ -24,7 +24,6 @@ const StyledInput = styled.input`
   text-indent: 2%;
   margin: 3% 0;
   font-size: ${myTheme.typography["text-p2"]};
-  font-weight: 300;
   color: ${myTheme.color["blue-4"]};
   border: none;
   border-bottom: 1px solid ${myTheme.color["blue-4"]};
@@ -73,8 +72,9 @@ const StyledButton = styled.button`
     background-color: grey;
   }
 `
+
 const StyledH3 = styled.h3`
-  font-weight: lighter;
+  font-weight: 400;
 `
 
 const ContactForm = ({ form }) => {

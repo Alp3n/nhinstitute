@@ -4,44 +4,42 @@ import AboutPersonGalleryMobile from "../about/mobile/about-person-gallery-mobil
 import GalleryMobile from "../gallery/gallery-mobile"
 import Product from "../product/product"
 import ContactForm from "../contact/contact-form"
-import { pageData } from "../../content/data/page-data"
-import { pageDataEn } from "../../content/data/page-data-en"
+import { useTranslation } from "react-i18next"
 
-const HomeMobile = ({ isEn }) => {
-  const myPageData = isEn ? pageDataEn : pageData
+const HomeMobile = () => {
+  const { t } = useTranslation()
   return (
     <>
-      <GalleryMobile title={myPageData.title.mobile} />
+      <GalleryMobile title={t("title.desktop")} />
       <Section
-        id={myPageData.sections.about.id}
-        title={myPageData.sections.about.title}
-        texts={myPageData.sections.about.texts}
+        id={t("sections.about.id")}
+        title={t("sections.about.title")}
+        texts={t("sections.about.texts")}
       >
-        <AboutPersonGalleryMobile isEn={isEn} />
+        <AboutPersonGalleryMobile people={t("people")} more={t("more")} />
       </Section>
       <Section
-        id={myPageData.sections.products.id}
-        title={myPageData.sections.products.title}
-        texts={myPageData.sections.products.texts}
+        id={t("sections.products.id")}
+        title={t("sections.products.title")}
+        texts={t("sections.products.texts")}
         className="products"
       >
-        {myPageData.sections.products.items.map(item => (
+        {t("sections.products.items").map(item => (
           <Product
             key={item.id}
             item={item}
             width={`60vw`}
             height={`60vw`}
-            soonPL={myPageData.sections.products.soonPL}
-            soonEN={myPageData.sections.products.soonEN}
+            soon={t("sections.products.soon")}
           />
         ))}
       </Section>
       <Section
-        id={myPageData.sections.cooperation.id}
-        title={myPageData.sections.cooperation.title}
-        texts={myPageData.sections.cooperation.texts}
+        id={t("sections.cooperation.id")}
+        title={t("sections.cooperation.title")}
+        texts={t("sections.cooperation.texts")}
       >
-        <ContactForm form={myPageData.form} />
+        <ContactForm form={t("form")} />
       </Section>
     </>
   )

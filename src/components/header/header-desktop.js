@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 import Logo from "../logo/logo"
-
 import Nav from "./nav"
+import LanguageSwitcher from "../language-switcher"
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -27,12 +27,13 @@ const StyledBox = styled.div`
   }
 `
 
-const HeaderDesktop = ({ isEn }) => {
+const HeaderDesktop = () => {
   return (
     <StyledHeader>
       <StyledBox>
         <Logo width="350px" />
-        <Nav flex="flex" isEn={isEn} />
+        <Nav flex="flex" />
+        <LanguageSwitcher />
       </StyledBox>
     </StyledHeader>
   )

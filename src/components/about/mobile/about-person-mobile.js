@@ -47,39 +47,29 @@ const PersonTitles = styled.span`
 `
 const StyledPersonWrapper = styled.div``
 
-const AboutPerson = ({ setSelectedPerson, person, selectedPerson, isEn }) => {
-  function handleOnClick(person) {
-    setSelectedPerson(person)
-  }
-
+const AboutPersonMobile = ({ handlePerson, person, selectedPerson, img }) => {
   return (
     <AboutWrapper>
       <AboutPersonWrapper className="person">
-        <AboutPersonPortrait
-          image={person.frontmatter.featuredImage.childImageSharp.fluid}
-        />
-        <PersonName size="xsmall">{person.frontmatter.name}</PersonName>
+        <AboutPersonPortrait image={img} />
+        <PersonName size="xsmall">{person.name}</PersonName>
         {selectedPerson === null
-          ? isEn
-            ? person.frontmatter.titlesEN.map((title, index) => (
-                <PersonTitles key={index}>{title}</PersonTitles>
-              ))
-            : person.frontmatter.titles.map((title, index) => (
-                <PersonTitles key={index}>{title}</PersonTitles>
-              ))
+          ? person.titles.map(title => (
+              <PersonTitles key={title}>{title}</PersonTitles>
+            ))
           : null}
       </AboutPersonWrapper>
 
       {selectedPerson === null ? (
-        <ScrollArrow direction="-45deg" onClick={() => handleOnClick(person)} />
+        <ScrollArrow direction="-45deg" onClick={() => handlePerson(person)} />
       ) : (
         <StyledPersonWrapper>
-          <AboutPersonMoreMobile selectedPerson={selectedPerson} isEn={isEn} />
-          <ScrollArrow direction="135deg" onClick={() => handleOnClick(null)} />
+          <AboutPersonMoreMobile selectedPerson={selectedPerson} />
+          <ScrollArrow direction="135deg" onClick={() => handlePerson(null)} />
         </StyledPersonWrapper>
       )}
     </AboutWrapper>
   )
 }
 
-export default AboutPerson
+export default AboutPersonMobile

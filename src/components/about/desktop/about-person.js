@@ -59,34 +59,37 @@ const StyledButton = styled.button`
   }
 `
 
-const AboutPerson = ({ setSelectedPerson, person, selectedPerson, isEn }) => {
-  function handleOnClick(person) {
-    setSelectedPerson(person)
-  }
-
+const AboutPerson = ({
+  handlePerson,
+  person,
+  selectedPerson,
+  img,
+  more,
+  //  isEn
+}) => {
   return (
     <AboutWrapper>
       <AboutPersonWrapper className="person">
-        <AboutPersonPortrait
-          image={person.frontmatter.featuredImage.childImageSharp.fluid}
-        />
-        <PersonName>{person.frontmatter.name}</PersonName>
-        {isEn
-          ? person.frontmatter.titlesEN.map((title, index) => (
-              <PersonTitles key={index}>{title}</PersonTitles>
-            ))
-          : person.frontmatter.titles.map((title, index) => (
-              <PersonTitles key={index}>{title}</PersonTitles>
-            ))}
+        <AboutPersonPortrait image={img} />
+        <PersonName>{person.name}</PersonName>
+        {person.titles.map(title => (
+          <PersonTitles key={title}>{title}</PersonTitles>
+        ))}
       </AboutPersonWrapper>
       {selectedPerson === null ? (
-        <StyledButton onClick={() => handleOnClick(person)} className="button">
-          {isEn ? "more" : "więcej"}
+        <StyledButton
+          onClick={() => handlePerson(person, img)}
+          className="button"
+        >
+          {more}
         </StyledButton>
       ) : (
-        <StyledButton onClick={() => handleOnClick(null)} className="button">
+        <StyledButton
+          onClick={() => handlePerson(null, null)}
+          className="button"
+        >
           <CgArrowLeft color="white" />
-          {isEn ? "less" : "mniej"}
+          {more}
         </StyledButton>
       )}
     </AboutWrapper>

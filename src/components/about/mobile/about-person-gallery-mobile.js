@@ -14,98 +14,66 @@ const StyledPersonGallery = styled.div`
   }
 `
 
-const AboutPersonGalleryMobile = ({ isEn }) => {
+const AboutPersonGalleryMobile = ({ people }) => {
   const [selectedPersonRokicki, setSelectedPersonRokicki] = useState(null)
   const [selectedPersonGrodzicka, setSelectedPersonGrodzicka] = useState(null)
   const [selectedPersonWolski, setSelectedPersonWolski] = useState(null)
 
   const data = useStaticQuery(graphql`
-    {
-      rokicki: mdx(frontmatter: { slug: { eq: "people/rokicki" } }) {
-        id
-        frontmatter {
-          myid
-          name
-          slug
-          texts
-          title
-          titles
-          textsEN
-          titlesEN
-          featuredImage {
-            childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+    query ImagesMobile {
+      rokicki: file(relativePath: { eq: "portrait/p1rokicki.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
-      grodzicka: mdx(frontmatter: { slug: { eq: "people/grodzicka" } }) {
-        id
-        frontmatter {
-          myid
-          name
-          slug
-          texts
-          textsEN
-          title
-          titles
-          titlesEN
-          featuredImage {
-            childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+      grodzicka: file(relativePath: { eq: "portrait/p2grodzicka.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
-      wolski: mdx(frontmatter: { slug: { eq: "people/wolski" } }) {
-        id
-        frontmatter {
-          myid
-          name
-          slug
-          texts
-          title
-          titles
-          textsEN
-          titlesEN
-          featuredImage {
-            childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+      wolski: file(relativePath: { eq: "portrait/p3wolski.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
+  const handleRokicki = person => {
+    setSelectedPersonRokicki(person)
+  }
+  const handleGrodzicka = person => {
+    setSelectedPersonGrodzicka(person)
+  }
+  const handleWolski = person => {
+    setSelectedPersonWolski(person)
+  }
+
   return (
     <div>
       <StyledPersonGallery>
         <AboutPersonMobile
-          key={data.rokicki.myId}
-          person={data.rokicki}
-          setSelectedPerson={setSelectedPersonRokicki}
+          person={people.rokicki}
+          img={data.rokicki.childImageSharp.fluid}
+          handlePerson={handleRokicki}
           selectedPerson={selectedPersonRokicki}
-          isEn={isEn}
         />
         <AboutPersonMobile
-          key={data.grodzicka.myId}
-          person={data.grodzicka}
-          setSelectedPerson={setSelectedPersonGrodzicka}
+          person={people.grodzicka}
+          img={data.grodzicka.childImageSharp.fluid}
+          handlePerson={handleGrodzicka}
           selectedPerson={selectedPersonGrodzicka}
-          isEn={isEn}
         />
         <AboutPersonMobile
-          key={data.wolski.myId}
-          person={data.wolski}
-          setSelectedPerson={setSelectedPersonWolski}
+          person={people.wolski}
+          img={data.wolski.childImageSharp.fluid}
+          handlePerson={handleWolski}
           selectedPerson={selectedPersonWolski}
-          isEn={isEn}
         />
       </StyledPersonGallery>
     </div>

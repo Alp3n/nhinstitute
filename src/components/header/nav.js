@@ -1,9 +1,8 @@
-import React from "react"
+import React, { Suspense } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import myTheme from "../../styles/my-theme"
-import { pageData } from "../../content/data/page-data"
-import { pageDataEn } from "../../content/data/page-data-en"
+import { useTranslation } from "react-i18next"
 
 const StyledList = styled.ul`
   margin: 0;
@@ -39,11 +38,18 @@ const StyledListPoint = styled.li`
   margin-left: 20px;
 `
 
-const Nav = ({ isEn }) => {
+const Nav = () => {
+  const { t } = useTranslation()
   return (
-    <nav>
-      <StyledList>
-        {isEn
+    <Suspense fallback="loading">
+      <nav>
+        <StyledList>
+          {t("navbar.links").map(link => (
+            <StyledListPoint key={link.href}>
+              <StyledLink to={link.href}>{link.name}</StyledLink>
+            </StyledListPoint>
+          ))}
+          {/* isEn
           ? pageDataEn.navbar.links.map(link => (
               <StyledListPoint key={link.href}>
                 <StyledLink to={link.href}>{link.name}</StyledLink>
@@ -53,9 +59,10 @@ const Nav = ({ isEn }) => {
               <StyledListPoint key={link.href}>
                 <StyledLink to={link.href}>{link.name}</StyledLink>
               </StyledListPoint>
-            ))}
-      </StyledList>
-    </nav>
+            )) */}
+        </StyledList>
+      </nav>
+    </Suspense>
   )
 }
 

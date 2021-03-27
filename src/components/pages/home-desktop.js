@@ -5,44 +5,42 @@ import Section from "../section/section"
 import AboutPersonGallery from "../about/desktop/about-person-gallery"
 import Product from "../product/product"
 import Contact from "../contact/Contact"
-import { pageData } from "../../content/data/page-data"
-import { pageDataEn } from "../../content/data/page-data-en"
+import { useTranslation } from "react-i18next"
 
-const HomeDesktop = ({ isEn }) => {
-  const myPageData = isEn ? pageDataEn : pageData
+const HomeDesktop = () => {
+  const { t } = useTranslation()
   return (
     <>
-      <GalleryDesktop title={myPageData.title.desktop} />
+      <GalleryDesktop title={t("title.desktop")} />
       <ScrollArrow href={"#about"} direction={"-45deg"} />
       <Section
-        id={myPageData.sections.about.id}
-        title={myPageData.sections.about.title}
-        texts={myPageData.sections.about.texts}
+        id={t("sections.about.id")}
+        title={t("sections.about.title")}
+        texts={t("sections.about.texts")}
       >
-        <AboutPersonGallery isEn={isEn} />
+        <AboutPersonGallery people={t("people")} more={t("more")} />
       </Section>
       <Section
-        id={myPageData.sections.products.id}
-        title={myPageData.sections.products.title}
-        texts={myPageData.sections.products.texts}
+        id={t("sections.products.id")}
+        title={t("sections.products.title")}
+        texts={t("sections.products.texts")}
       >
-        {myPageData.sections.products.items.map(item => (
+        {t("sections.products.items").map(item => (
           <Product
             key={item.id}
             item={item}
             width={`25vw`}
             height={`25vw`}
-            soonPL={myPageData.sections.products.soonPL}
-            soonEN={myPageData.sections.products.soonEN}
+            soon={t("sections.products.soon")}
           />
         ))}
       </Section>
       <Section
-        id={myPageData.sections.cooperation.id}
-        title={myPageData.sections.cooperation.title}
-        texts={myPageData.sections.cooperation.texts}
+        id={t("sections.cooperation.id")}
+        title={t("sections.cooperation.title")}
+        texts={t("sections.cooperation.texts")}
       >
-        <Contact form={myPageData.form} />
+        <Contact form={t("form")} />
       </Section>
     </>
   )

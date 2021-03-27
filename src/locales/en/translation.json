@@ -1,0 +1,150 @@
+{
+  "companyName": "Nutrition Health Institute",
+  "navbar": {
+    "links": [
+      { "name": "about us", "href": "#about" },
+      { "name": "products", "href": "#products" },
+      { "name": "cooperation", "href": "#cooperation" },
+      { "name": "contact", "href": "#footer" }
+    ]
+  },
+  "title": {
+    "desktop": {
+      "heading": "health\nand fertility",
+      "paragraph": "Best people, best products,\nbest opportunities"
+    },
+    "mobile": {
+      "heading": "health\nand fertility",
+      "paragraph": "Best people,\nbest products,\nbest opportunities"
+    }
+  },
+  "sections": {
+    "about": {
+      "id": "about",
+      "title": "about us",
+      "texts": [
+        {
+          "text": "Nutrition Health Institute – company that concentrates on developing and manufacturing the newest generation multi-component pharmaceutical products, both for men and women that would like to fulfill their biggest dream – become happy parents. Diagnosed infertility very often becomes the main focus of life that is hard to accept and deal with. Nutrition Health Institute manufactures and sells innovative and the best in its class products in an area of men's and women’s health, with the task of making such couples happy. Our team are the best specialists - Dr Tomasz Rokicki, Dr Jan Karol Wolski and Adriana Grodzicka."
+        }
+      ]
+    },
+    "products": {
+      "id": "products",
+      "title": "products",
+      "texts": [
+        {
+          "text": "Our products has been developed after many years of research conducted by eminent Polish specialists working in the best clinics dealing with infertility treatment in cooperation with academic community, health service workers as well as patients. Our supplements meet the highest quality standards, they are safe and their main function is helping patients seeking pregnancy in making their dreams come true."
+        }
+      ],
+      "soon": "Soon TENfertil ONA and TENhair will be available on Polish market.",
+      "items": [
+        {
+          "id": 1,
+          "name": "TENfertil ON",
+          "heading": "TENfertil ON",
+          "image": "../../images/png/tenfertil.png",
+          "buttonMore": {
+            "href": "https://tenfertil.pl",
+            "label": "about tenfertil on"
+          },
+          "buttonBuy": {
+            "href": "https://tenfertil.pl/buy",
+            "label": "where to buy"
+          },
+          "texts": [
+            {
+              "text": "Contents and dosage of TENfertil ON has been developed on the basis of many years of experience of Polish specialists working in leading Polish clinics and treating infertility based on the newest developments in this field as well as guidelines from scientific society dealing with reproduction. "
+            },
+            {
+              "text": "TENfertil ON can be used by men trying to have kids. It is especially recommended for men with lower semen parameters. "
+            },
+            {
+              "text": "Time of using product shouldn’t be shorter than 3 months. It is recommended to take TENfertil ON throughout the whole period of trying to get pregnant and treating infertility. "
+            }
+          ]
+        }
+      ]
+    },
+    "cooperation": {
+      "id": "cooperation",
+      "title": "cooperation",
+      "texts": [
+        {
+          "text": "Representatives of medical professions are the people who have the most contact with patients and they are the ones who have invaluable specialist knowledge on the results of treating patients and ways of fighting diseases. This plays the key part in raising the level of care among patients, development of therapy and improving results of treatment."
+        },
+        {
+          "text": "Cooperation at this moment is based mainly on clinical trials - medical doctors leading the treatment and other representatives of medical professions are conducting clinical trials in research facilities according to clinical trials methodology approved by health service institutions and independent bioethical commissions."
+        }
+      ]
+    }
+  },
+  "form": {
+    "formURL": "",
+    "title": "Complete the form to take part",
+    "placeholders": {
+      "fullName": "First name and last name",
+      "email": "E-mail",
+      "phoneNumber": "Phone number"
+    },
+    "buttonSendPL": "send",
+    "agreement": "I consent to the use and processing of my personal data for the purpose of completing the order and contacting with me in accordance with the provisions of the GDPR regulation on the protection of personal data. I declare that I have been informed about my right to access my personal data, correct it and request removal, as well as the right to withdraw my consent at any time."
+  },
+  "footer": {
+    "id": "footer",
+    "logo": "url",
+    "number": "+48 666 368 005",
+    "email": "info@nhinstitute.pl",
+    "company": "Nutrition Health Institute Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska\nKRS: 0000861627\nREGON: 38710727\nNIP: 9512507706",
+    "copyrights": "Nutrition Health Institute"
+  },
+  "people": {
+    "rokicki": {
+      "myid": 1,
+      "slug": "people/rokicki",
+      "name": "Tomasz Rokicki",
+      "featuredImage": "../../images/portrait/p1rokicki.jpg",
+      "titles": [
+        "Medical Expert,",
+        "\nDoctor of Medical Science,",
+        "\nGynecologist-Obstetrician Specialist"
+      ],
+      "texts": [
+        "Doctor of Medical Science, an expert obstetrician-gynecologist, Alumni of Medical University of Warsaw, assistant professor at the Department of Gynaecology and Obstetrics at the Medical University of Warsaw. ",
+        "Since 2002 founder and General Manager of Fertility Clinics - Invimed in Warsaw. He is the author of a number of publications on fertility. ",
+        "Member of many Polish and foreign scientific societies. He is also a creator of e-owulacja programme and a website www.e-owulacja.pl. "
+      ]
+    },
+    "grodzicka": {
+      "myid": 2,
+      "slug": "people/grodzicka",
+      "name": "Adriana Grodzicka",
+      "featuredImage": "../../images/portrait/p2grodzicka.jpg",
+      "titles": ["Chairman of the Board"],
+      "texts": [
+        "A graduate at Law and Administration Department of Warsaw University. She has a long work experience in pharmaceutical industry. She has worked in global pharma brands both in the innovative as well as generic medicine segment. ",
+        "Now the Chairman of the Board of Nutrition Health Institute. She is responsible for planning and implementation of the company's strategy as well as adapting to the changing environment. ",
+        "She manages areas of marketing, sales and distribution. "
+      ]
+    },
+    "wolski": {
+      "myid": 3,
+      "slug": "people/wolski",
+      "name": "Jan Karol Wolski",
+      "featuredImage": "../../images/portrait/p3wolski.jpg",
+      "titles": [
+        "Medical Expert, Urologist, EBU 4860",
+        "\nPediatric Surgeon Specialist",
+        "\nChildren's Urlog Specialist",
+        "\nClinical Andrologist, PSA Certificate"
+      ],
+      "texts": [
+        "Expert Urologist, FEBU 4860, Pediatric Surgeon Specialist, Children's Urlog Specialist, Andrologist in Clinical hospitals, PSA Certificate (Polish Society of Allergology ), Alumni of the Second Medical Department of Medical Academy in Warsaw in 1981 (now Medical University). He gained experience in The Children’s Memorial Health Institute, Międzylesie Specialist Hospital in Warsaw, National Cancer Centre and scholarships in Germany. ",
+        "He has been working as an andrologist since 1989. Since 1995 he has been the main consultant of andrology and urology in nOvum Clinic in Warsaw where as a pioneer in Poland has introduced testicular biopsy (percutaneous in 1996 and with the use of surgical microscope in 2012). ",
+        "Winner of numerous prizes: Polish Society of Paediatric Surgeons (1988), American Society of Andrology(1977), Scientific Committee of Children’s Health Institute (2020), Polish Urologist Society (2002, 2014, 2015). ",
+        "Lecturer on courses in Postgraduate Studies Medical Centre, Medical University of Warsaw, Polish Society of Andrology, SWPS University. ",
+        "Author and co-author of over 250 scientific papers. "
+      ]
+    }
+  },
+  "more": "more"
+}

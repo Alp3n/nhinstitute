@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import myTheme from "../../styles/my-theme"
+import LanguageSwitcher from "../language-switcher"
 
 import Nav from "./nav"
 
@@ -34,6 +35,7 @@ const Menu = (props, { isVisible, setVisible }) => {
     <StyledMenuWrapper {...props} className={isVisible ? "opened" : "closed"}>
       <StyledBreak />
       <Nav isEn={props.isEn} setVisible={setVisible} />
+      <LanguageSwitcher />
     </StyledMenuWrapper>
   )
 }

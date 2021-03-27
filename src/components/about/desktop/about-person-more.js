@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import myTheme from "../../../styles/my-theme"
 import AboutPerson from "./about-person"
+import { useTranslation } from "react-i18next"
 
 const StyledWrapper = styled.div`
   display: grid;
@@ -23,29 +24,23 @@ const StyledInfoWrapper = styled.div`
 `
 
 const StyledInfo = styled.p``
-const AboutPersonMore = ({ selectedPerson, setSelectedPerson, isEn }) => {
+const AboutPersonMore = ({ selectedPerson, selectedImg, handlePerson }) => {
+  const { t } = useTranslation()
   return (
     <StyledWrapper className="aboutperson">
       <AboutPerson
         person={selectedPerson}
-        setSelectedPerson={setSelectedPerson}
+        img={selectedImg}
+        handlePerson={handlePerson}
         className="aboutperson"
-        isEn={isEn}
       />
       <StyledInfoWrapper>
-        {isEn
-          ? selectedPerson.frontmatter.textsEN.map(text => (
-              <StyledInfo className="info" key={text}>
-                {text}
-                <br />
-              </StyledInfo>
-            ))
-          : selectedPerson.frontmatter.texts.map(text => (
-              <StyledInfo className="info" key={text}>
-                {text}
-                <br />
-              </StyledInfo>
-            ))}
+        {selectedPerson.texts.map(text => (
+          <StyledInfo className="info" key={text}>
+            {text}
+            <br />
+          </StyledInfo>
+        ))}
       </StyledInfoWrapper>
     </StyledWrapper>
   )

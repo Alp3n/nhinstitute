@@ -21,10 +21,10 @@ const StyledBody = styled.div`
   }
 `
 
-const LayoutDesktop = ({ children, isEn }) => {
+const LayoutDesktop = ({ children }) => {
   return (
     <StyledLayout>
-      <HeaderDesktop isEn={isEn} />
+      <HeaderDesktop />
       <StyledBody>
         <main>{children}</main>
       </StyledBody>

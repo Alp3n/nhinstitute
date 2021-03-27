@@ -91,7 +91,7 @@ const StyledButtons = styled.div`
   }
 `
 
-const Product = ({ width, height, buttonOff, item, soonPL, soonEN }) => {
+const Product = ({ width, height, item, soon }) => {
   const data = useStaticQuery(graphql`
     query {
       tenfertil: file(name: { eq: "tenfertil" }) {
@@ -127,20 +127,11 @@ const Product = ({ width, height, buttonOff, item, soonPL, soonEN }) => {
         <StyledBreakLine className="breakline" />
       </StyledInfo>
       <StyledButtons className="buttons">
-        {buttonOff ? null : (
-          <Button
-            href={item.buttonMorePL.href}
-            label={item.buttonMorePL.label}
-          />
-        )}
-        {buttonOff ? null : (
-          <Button href={item.buttonBuyPL.href} label={item.buttonBuyPL.label} />
-        )}
+        <Button href={item.buttonMore.href} label={item.buttonMore.label} />
+
+        <Button href={item.buttonBuy.href} label={item.buttonBuy.label} />
       </StyledButtons>
-      <StyledInfo>
-        {soonPL}
-        {soonEN}
-      </StyledInfo>
+      <StyledInfo>{soon}</StyledInfo>
     </StyledWrapper>
   )
 }

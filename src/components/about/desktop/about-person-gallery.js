@@ -14,61 +14,71 @@ const StyledPersonGallery = styled.div`
 
 const StyledPersonWrapper = styled.div``
 
-const AboutPersonGallery = ({ isEn }) => {
+const AboutPersonGallery = ({ people, more }) => {
   const [selectedPerson, setSelectedPerson] = useState(null)
+  const [selectedImg, setSelectedImg] = useState(null)
 
   const data = useStaticQuery(graphql`
-    query Images($reg: String = "/people/") {
-      people: allMdx(
-        filter: { frontmatter: { slug: { regex: $reg } } }
-        sort: { fields: frontmatter___myid }
-      ) {
-        edges {
-          node {
-            id
-            slug
-            frontmatter {
-              slug
-              name
-              myid
-              titles
-              titlesEN
-              texts
-              textsEN
-              featuredImage {
-                id
-                childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
+    query Images {
+      rokicki: file(relativePath: { eq: "portrait/p1rokicki.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      grodzicka: file(relativePath: { eq: "portrait/p2grodzicka.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      wolski: file(relativePath: { eq: "portrait/p3wolski.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
+  const handlePerson = (person, img) => {
+    setSelectedPerson(person)
+    setSelectedImg(img)
+  }
   return (
     <div>
       {selectedPerson === null ? (
         <StyledPersonGallery>
-          {data.people.edges.map(person => (
-            <AboutPerson
-              key={person.node.id}
-              person={person.node}
-              setSelectedPerson={setSelectedPerson}
-              selectedPerson={selectedPerson}
-              isEn={isEn}
-            />
-          ))}
+          <AboutPerson
+            person={people.rokicki}
+            img={data.rokicki.childImageSharp.fluid}
+            handlePerson={handlePerson}
+            selectedPerson={selectedPerson}
+            more={more}
+          />
+          <AboutPerson
+            person={people.grodzicka}
+            img={data.grodzicka.childImageSharp.fluid}
+            handlePerson={handlePerson}
+            selectedPerson={selectedPerson}
+            more={more}
+          />
+          <AboutPerson
+            person={people.wolski}
+            img={data.wolski.childImageSharp.fluid}
+            handlePerson={handlePerson}
+            selectedPerson={selectedPerson}
+            more={more}
+          />
         </StyledPersonGallery>
       ) : (
         <StyledPersonWrapper>
           <AboutPersonMore
+            selectedImg={selectedImg}
             selectedPerson={selectedPerson}
-            setSelectedPerson={setSelectedPerson}
-            isEn={isEn}
+            handlePerson={handlePerson}
           />
         </StyledPersonWrapper>
       )}

@@ -1,4 +1,4 @@
-import React, { Suspense } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import myTheme from "../../styles/my-theme"
@@ -40,15 +40,14 @@ const StyledListPoint = styled.li`
 const Nav = () => {
   const { t } = useTranslation()
   return (
-    <Suspense fallback="loading">
-      <nav>
-        <StyledList>
-          {t("navbar.links").map(link => (
-            <StyledListPoint key={link.href}>
-              <StyledLink to={link.href}>{link.name}</StyledLink>
-            </StyledListPoint>
-          ))}
-          {/* isEn
+    <nav>
+      <StyledList>
+        {t("navbar.links").map(link => (
+          <StyledListPoint key={link.href}>
+            <StyledLink to={link.href}>{link.name}</StyledLink>
+          </StyledListPoint>
+        ))}
+        {/* isEn
           ? pageDataEn.navbar.links.map(link => (
               <StyledListPoint key={link.href}>
                 <StyledLink to={link.href}>{link.name}</StyledLink>
@@ -59,9 +58,8 @@ const Nav = () => {
                 <StyledLink to={link.href}>{link.name}</StyledLink>
               </StyledListPoint>
             )) */}
-        </StyledList>
-      </nav>
-    </Suspense>
+      </StyledList>
+    </nav>
   )
 }
 

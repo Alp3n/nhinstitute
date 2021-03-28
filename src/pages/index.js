@@ -1,4 +1,4 @@
-import React, { Suspense } from "react"
+import React from "react"
 import { useMediaQuery } from "react-responsive"
 
 import LayoutDesktop from "../components/layout-desktop"
@@ -12,7 +12,7 @@ const IndexPage = () => {
   const isBigScreen = useMediaQuery({ query: "(min-width:1201px)" })
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" })
   return (
-    <Suspense fallback="loading">
+    <>
       <SEO title="Suplementy diety dla par starających się o dzieci." />
       {isBigScreen && (
         <LayoutDesktop>
@@ -24,7 +24,7 @@ const IndexPage = () => {
           <HomeMobile />
         </LayoutMobile>
       )}
-    </Suspense>
+    </>
   )
 }
 

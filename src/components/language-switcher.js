@@ -84,7 +84,9 @@ const LanguageSwitcher = () => {
         </DisplayText>
       )}
       {open
-        ? languages.map(language => <div>{renderLanguageChoice(language)}</div>)
+        ? languages.map(language => (
+            <div key={language.code}>{renderLanguageChoice(language)}</div>
+          ))
         : null}
     </Wrapper>
   )

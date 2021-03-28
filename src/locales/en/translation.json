@@ -146,5 +146,9 @@
       ]
     }
   },
-  "more": "more"
+  "more": "more",
+  "notFound": {
+    "title": "404: Not Found",
+    "paragraph": "There is no website like this"
+  }
 }

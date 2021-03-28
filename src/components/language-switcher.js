@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 
-import { CgChevronDown, CgChevronUp } from "react-icons/cg"
+import { CgChevronDown } from "react-icons/cg"
 
 const Button = styled.button`
   border: none;
@@ -26,7 +26,6 @@ const Wrapper = styled.div`
   @media only screen and (max-width: 1200px) {
     padding: 0;
     margin-left: 20px;
-    /* text-align: center; */
   }
 `
 const StyledP = styled.p`

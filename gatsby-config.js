@@ -34,7 +34,7 @@ module.exports = {
         path: `${__dirname}/src/content/`,
       },
     },
-    { resolve: `gatsby-plugin-mdx` },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

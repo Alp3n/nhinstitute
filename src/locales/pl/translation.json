@@ -146,5 +146,10 @@
       ]
     }
   },
-  "more": "więcej"
+  "more": "więcej",
+
+  "notFound": {
+    "title": "404: Nie znaleziono",
+    "paragraph": "Nie ma takiej strony"
+  }
 }

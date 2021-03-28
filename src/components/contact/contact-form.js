@@ -74,7 +74,8 @@ const StyledButton = styled.button`
 `
 
 const StyledH3 = styled.h3`
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: bold;
 `
 
 const ContactForm = ({ form }) => {

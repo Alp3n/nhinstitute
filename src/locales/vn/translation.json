@@ -45,7 +45,7 @@
           "image": "../../images/png/tenfertil.png",
           "buttonMore": {
             "href": "https://tenfertil.pl",
-            "label": "tìm hiểu thêm về TENfertil On"
+            "label": "thêm về TENfertil On"
           },
           "buttonBuy": {
             "href": "https://tenfertil.pl/buy",
@@ -146,5 +146,9 @@
       ]
     }
   },
-  "more": "hơn"
+  "more": "hơn",
+  "notFound": {
+    "title": "404: Không tìm thấy",
+    "paragraph": "Không có trang web nào như thế này"
+  }
 }

@@ -5,8 +5,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Button from "../button/button"
 import myTheme from "../../styles/my-theme"
 
-import { Trans, useTranslation } from "react-i18next"
-
 const StyledImg = styled(Img)`
   margin-bottom: 4vh;
   width: ${props => props.width};
@@ -108,8 +106,6 @@ const StyledLine = styled.div`
 `
 
 const Product = ({ width, height, item, soon }) => {
-  const { t } = useTranslation()
-
   const data = useStaticQuery(graphql`
     query {
       tenfertil: file(name: { eq: "tenfertil" }) {
@@ -149,13 +145,7 @@ const Product = ({ width, height, item, soon }) => {
 
         <Button href={item.buttonBuy.href} label={item.buttonBuy.label} />
       </StyledButtons>
-      <StyledLine>
-        <Trans
-          i18nKey="sections.products.soon"
-          defaults="Wkrótce będę dostępne na rynku Polskim {{ tenfertil }} i {{ tenhair }}"
-          values={{ tenfertil: "TENfertil ONA", tenhair: "TENhair" }}
-        />
-      </StyledLine>
+      <StyledLine>{soon}</StyledLine>
     </StyledWrapper>
   )
 }

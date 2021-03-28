@@ -2,7 +2,7 @@
   "companyName": "Nutrition Health Institute",
   "navbar": {
     "links": [
-      { "name": "thông tin về chúng tôi", "href": "#about" },
+      { "name": "về chúng tôi", "href": "#about" },
       { "name": "SẢN PHẨM", "href": "#products" },
       { "name": "Hợp tác", "href": "#cooperation" },
       { "name": "Liên hệ", "href": "#footer" }
@@ -36,7 +36,7 @@
           "text": "Các sản phẩm của chúng tôi được phát triển dựa trên nhiều năm nghiên cứu thực hiện bởi các chuyên gia Ba Lan xuất sắc làm việc tại các phòng khám tốt nhất về điều trị vô sinh với sự hợp tác của các chuyên gia chăm sóc sức khỏe và bệnh nhân. Các chất bổ sung trong thực phẩm chức năng đáp ứng tiêu chuẩn chất lượng cao nhất, an toàn và nhiệm vụ chính của chúng là giúp những bệnh nhân đang tìm kiếm con cái thực hiện được mong muốn."
         }
       ],
-      "soon": "Không lâu nữa trên thị trường Ba Lan <strong>TENfertil ONA</strong> và <strong>Tenhair</strong>.",
+      "soon": "Không lâu nữa trên thị trường Ba Lan TENfertil ONA và TENhair.",
       "items": [
         {
           "id": 1,
@@ -45,7 +45,7 @@
           "image": "../../images/png/tenfertil.png",
           "buttonMore": {
             "href": "https://tenfertil.pl",
-            "label": "tìm hiểu thêm về TENfertilOn"
+            "label": "tìm hiểu thêm về TENfertil On"
           },
           "buttonBuy": {
             "href": "https://tenfertil.pl/buy",

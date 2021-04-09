@@ -31,16 +31,19 @@ const PersonName = styled.h2`
   line-height: normal;
 `
 
-const PersonTitles = styled.span`
+const PersonTitles = styled.p`
+  margin: 0;
+  padding: 0;
   color: ${myTheme.color["blue-4"]};
   text-align: center;
-  font-weight: 300;
+
   @media only screen and (max-width: 1200px) {
     font-size: 16px;
     line-height: normal;
   }
   @media only screen and (max-width: 700px) {
-    width: 90%;
+    width: 100%;
+    line-height: 1;
     font-size: 14px;
     line-height: normal;
   }

@@ -47,17 +47,6 @@ const Nav = () => {
             <StyledLink to={link.href}>{link.name}</StyledLink>
           </StyledListPoint>
         ))}
-        {/* isEn
-          ? pageDataEn.navbar.links.map(link => (
-              <StyledListPoint key={link.href}>
-                <StyledLink to={link.href}>{link.name}</StyledLink>
-              </StyledListPoint>
-            ))
-          : pageData.navbar.links.map(link => (
-              <StyledListPoint key={link.href}>
-                <StyledLink to={link.href}>{link.name}</StyledLink>
-              </StyledListPoint>
-            )) */}
       </StyledList>
     </nav>
   )

@@ -33,7 +33,7 @@ const HeaderDesktop = () => {
       <StyledBox>
         <Logo width="350px" />
         <Nav flex="flex" />
-        <LanguageSwitcher />
+        <LanguageSwitcher desktop />
       </StyledBox>
     </StyledHeader>
   )

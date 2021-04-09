@@ -1,92 +1,55 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
 
-import { CgChevronDown } from "react-icons/cg"
-
-const Button = styled.button`
-  border: none;
-  padding: 0;
-  margin: 0 16px 0 0;
-  background-color: transparent;
-  color: #151070;
-  font-size: 20px;
-  text-transform: uppercase;
-`
 const Wrapper = styled.div`
-  .selected {
-    font-weight: bold;
-    color: #00b4aa;
-  }
-
-  button:last-child {
-    margin: 0;
-  }
+  display: flex;
+  align-items: center;
 
   @media only screen and (max-width: 1200px) {
     padding: 0;
     margin-left: 20px;
   }
 `
-const StyledP = styled.p`
-  font-weight: bold;
-  color: #00b4aa;
+
+const StyledSelect = styled.select`
+  border: none;
+  background-color: ${props => props.desktop && "transparent"};
   text-transform: uppercase;
   font-size: 20px;
-  margin: 0;
+  color: #00b4aa;
+  -webkit-appearance: menulist-button;
 `
 
-const DisplayText = styled.button`
-  padding: 0;
-  border: none;
-  background: transparent;
-  display: flex;
-  align-items: center;
+const StyledOption = styled.option`
+  color: #000;
 `
 
-const LanguageSwitcher = () => {
-  const [open, setOpen] = useState()
+const LanguageSwitcher = ({ desktop }) => {
   const { i18n } = useTranslation()
   const languages = [
-    { code: "pl", label: "pl" },
-    { code: "en", label: "en" },
-    { code: "vn", label: "vn" },
+    { code: "pl", label: "PL" },
+    { code: "en", label: "EN" },
+    { code: "vn", label: "VN" },
   ]
 
   const handleChangeLanguage = lng => {
     i18n.changeLanguage(lng)
-    setOpen(false)
-  }
-
-  const renderLanguageChoice = ({ code, label }) => {
-    return (
-      <Button
-        key={code}
-        className={i18n.language === code && "selected"}
-        onClick={() => handleChangeLanguage(code)}
-      >
-        {label}
-      </Button>
-    )
   }
 
   return (
     <Wrapper>
-      {open ? null : (
-        <DisplayText
-          onClick={() => {
-            setOpen(true)
-          }}
-        >
-          <StyledP>{i18n.language}</StyledP>
-          <CgChevronDown />
-        </DisplayText>
-      )}
-      {open
-        ? languages.map(language => (
-            <div key={language.code}>{renderLanguageChoice(language)}</div>
-          ))
-        : null}
+      <StyledSelect
+        desktop={desktop}
+        name="languages"
+        onChange={event => handleChangeLanguage(event.target.value)}
+      >
+        {languages.map(lang => (
+          <StyledOption key={lang.code} value={lang.code}>
+            {lang.label}
+          </StyledOption>
+        ))}
+      </StyledSelect>
     </Wrapper>
   )
 }

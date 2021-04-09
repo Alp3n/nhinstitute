@@ -29,8 +29,11 @@ const PersonName = styled.h2`
   text-align: center;
 `
 
-const PersonTitles = styled.span`
+const PersonTitles = styled.p`
   color: ${myTheme.color["blue-4"]};
+  margin: 0;
+  padding: 0;
+  line-height: 1;
   text-align: center;
 `
 const StyledButton = styled.button`
@@ -41,7 +44,6 @@ const StyledButton = styled.button`
   color: ${myTheme.color["white"]};
   padding: 16px 0;
   font-size: 24px;
-  font-family: "Lato";
   font-weight: 400;
   text-transform: uppercase;
   border: none;
@@ -77,10 +79,7 @@ const AboutPerson = ({
         ))}
       </AboutPersonWrapper>
       {selectedPerson === null ? (
-        <StyledButton
-          onClick={() => handlePerson(person, img)}
-          className="button"
-        >
+        <StyledButton onClick={() => handlePerson(person, img)}>
           {more}
         </StyledButton>
       ) : (

@@ -11,20 +11,33 @@
   "title": {
     "desktop": {
       "heading": "health\nand fertility",
-      "paragraph": "Best people, best products,\nbest opportunities"
+      "paragraph": "Best People     Best Products     Best Opportunities"
     },
     "mobile": {
       "heading": "health\nand fertility",
-      "paragraph": "Best people,\nbest products,\nbest opportunities"
+      "paragraph": "Best People    Best Products    Best Opportunities"
     }
   },
   "sections": {
     "about": {
       "id": "about",
       "title": "about us",
+      "buttonOpen": "more",
+      "buttonClose": "close",
       "texts": [
         {
           "text": "Nutrition Health Institute – company that concentrates on developing and manufacturing the newest generation multi-component pharmaceutical products, both for men and women that would like to fulfill their biggest dream – become happy parents. Diagnosed infertility very often becomes the main focus of life that is hard to accept and deal with. Nutrition Health Institute manufactures and sells innovative and the best in its class products in an area of men's and women’s health, with the task of making such couples happy. Our team are the best specialists - Dr Tomasz Rokicki, Dr Jan Karol Wolski and Adriana Grodzicka."
+        }
+      ],
+      "mobileTexts": [
+        {
+          "text": "Nutrition Health Institute – company that concentrates on developing and manufacturing the newest generation multi-component pharmaceutical products, both for men and women that would like to fulfill their biggest dream – become happy parents."
+        },
+        {
+          "text": "Diagnosed infertility very often becomes the main focus of life that is hard to accept and deal with. Nutrition Health Institute manufactures and sells innovative and the best in its class products in an area of men's and women’s health, with the task of making such couples happy."
+        },
+        {
+          "text": "Our team are the best specialists - Dr Tomasz Rokicki, Dr Jan Karol Wolski and Adriana Grodzicka."
         }
       ]
     },
@@ -41,25 +54,30 @@
         {
           "id": 1,
           "name": "TENfertil ON",
-          "heading": "TENfertil ON",
+          "heading": "TENfertil® ON",
           "image": "../../images/png/tenfertil.png",
           "buttonMore": {
             "href": "https://tenfertil.pl",
-            "label": "about tenfertil on"
-          },
-          "buttonBuy": {
-            "href": "https://tenfertil.pl/buy",
-            "label": "where to buy"
+            "label": "More"
           },
           "texts": [
             {
-              "text": "Contents and dosage of TENfertil ON has been developed on the basis of many years of experience of Polish specialists working in leading Polish clinics and treating infertility based on the newest developments in this field as well as guidelines from scientific society dealing with reproduction. "
-            },
+              "text": "Contents and dosage of TENfertil ON has been developed on the basis of many years of experience of Polish specialists working in leading Polish clinics and treating infertility based on the newest developments in this field as well as guidelines from scientific society dealing with reproduction."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "TENfertil ONA",
+          "heading": "TENfertil® ONA",
+          "image": "../../images/png/tenfertilONA.png",
+          "buttonMore": {
+            "href": "https://tenfertilona.pl",
+            "label": "More"
+          },
+          "texts": [
             {
-              "text": "TENfertil ON can be used by men trying to have kids. It is especially recommended for men with lower semen parameters. "
-            },
-            {
-              "text": "Time of using product shouldn’t be shorter than 3 months. It is recommended to take TENfertil ON throughout the whole period of trying to get pregnant and treating infertility. "
+              "text": "One of the most important things you need to do when preparing for pregnancy is getting the right amount of vitamins, micronutrients and other essential substances well before you become pregnant. TENfertil ONA is the best method of supplementation, easy and safe, proven by the best specialists."
             }
           ]
         }

@@ -9,13 +9,13 @@ const color = {
   "portrait-2": "#C6D1ED",
   "portrait-3": "#CAE3F2",
   hover: "#509EB4",
-  button: "#00B4AA",
-  "button-hover": "#5EAAA5",
+  button: "#003C74",
+  "button-hover": "#00B4AA",
   background: "#E9EDF9",
 }
 
 const typography = {
-  "text-p": "22px",
+  "text-p": "24px",
   "text-p2": "18px",
   "text-p3": "12px",
   "text-h1": "68px",

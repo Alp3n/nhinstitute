@@ -4,15 +4,20 @@ html {
   font: 112.5%/1.45em;
   box-sizing: border-box;
   overflow-y: scroll;
+  scroll-padding-top: 94px;
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    scroll-padding-top: 56px;
+  }
 }
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: "Lato", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Lato", "Oswald", sans-serif;
   line-height: 1.5;
-  color: #151070;
+  color: #003c74;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";

@@ -23,19 +23,29 @@ const StyledInfoWrapper = styled.div`
   font-weight: 300;
   color: ${myTheme.color["blue-4"]};
   grid-area: info;
-  font-size: 22px;
+  /* font-size: 22px; */
+
   @media only screen and (max-width: 1200px) {
     border: none;
     padding: 0;
-    font-size: 18px;
   }
   @media only screen and (max-width: 700px) {
     border: none;
+    font-size: 18px;
     padding: 0;
   }
 `
 
-const StyledInfo = styled.p``
+const StyledInfo = styled.p`
+  font-weight: 300;
+  
+  @media only screen and (max-width: 700px) {
+    border: none;
+    line-height: 30px;
+    font-size: 18px;
+    padding: 0;
+  }
+`
 
 const AboutPersonMoreMobile = ({ selectedPerson }) => {
   console.log(selectedPerson)

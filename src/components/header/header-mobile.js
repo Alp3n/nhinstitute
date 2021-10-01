@@ -11,7 +11,7 @@ const StyledHeaderSmall = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: #fcfcfc;
   padding: 1rem;
   z-index: 1000;
 `

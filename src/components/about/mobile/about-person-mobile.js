@@ -28,6 +28,8 @@ const PersonName = styled.h2`
   margin: 5% 0;
   text-transform: uppercase;
   font-size: 22px;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
   line-height: normal;
 `
 
@@ -44,6 +46,7 @@ const PersonTitles = styled.p`
   @media only screen and (max-width: 700px) {
     width: 100%;
     line-height: 1;
+    font-weight: 300;
     font-size: 14px;
     line-height: normal;
   }

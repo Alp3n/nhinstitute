@@ -5,11 +5,12 @@ import myTheme from "../../styles/my-theme"
 import { useTranslation } from "react-i18next"
 
 const StyledList = styled.ul`
-  margin: 0;
+  margin: 0 0 0 50px;
   line-height: 1.45rem;
 
   @media only screen and (min-width: 1201px) {
     display: flex;
+    align-items: flex-end;
   }
   @media only screen and (max-width: 1200px) {
     line-height: 2rem;
@@ -19,22 +20,22 @@ const StyledList = styled.ul`
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 20px;
-  color: ${myTheme.color["blue-4"]};
+  font-weight: 300;
+  color: ${myTheme.color.button};
   text-transform: uppercase;
-
   &:visited {
-    color: ${myTheme.color["blue-4"]};
+    color: ${myTheme.color.button};
   }
 
   &:hover {
-    color: ${myTheme.color.button};
+    color: ${myTheme.color["button-hover"]};
   }
 `
 
 const StyledListPoint = styled.li`
   margin: 0;
   list-style: none;
-  margin-left: 20px;
+  margin-left: 50px;
 `
 
 const Nav = () => {

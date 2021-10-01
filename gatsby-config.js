@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Nutrition Health Institute`,
-    description: `TENFertil ON to suplement diety dla mężczyzn starających się o dzieci.`,
+    description: `TENFertil ON oraz TENfertil ONA to suplementy diety dla mężczyzn i kobiet starających się o dzieci.`,
     author: `nhinstitute.pl`,
   },
   plugins: [

@@ -7,7 +7,7 @@ import Nav from "./nav"
 
 const StyledMenuWrapper = styled.div`
   position: fixed;
-  background-color: #f8f8f8;
+  background-color: #fcfcfc;
   width: 100%;
   flex-direction: column;
   display: ${props => (props.isVisible ? "block" : "none")};
@@ -30,12 +30,12 @@ const StyledBreak = styled.div`
   }
 `
 
-const Menu = (props, { isVisible, setMenu }) => {
+const Menu = (props, { isVisible }) => {
   return (
     <StyledMenuWrapper {...props} className={isVisible ? "opened" : "closed"}>
       <StyledBreak />
-      <Nav setMenu={setMenu} />
-      <LanguageSwitcher setMenu={setMenu} />
+      <Nav />
+      <LanguageSwitcher />
     </StyledMenuWrapper>
   )
 }

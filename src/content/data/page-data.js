@@ -143,7 +143,7 @@ export const pageData = {
     number: "+48 666 368 005",
     email: "info@nhinstitute.pl",
     company:
-      "Nutrition Health Institute Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska\nKRS: 0000861627\nREGON: 38710727\nNIP: 9512507706",
+      "Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska. KRS: 0000861627. REGON: 38710727. NIP: 9512507706",
     copyrights: "Nutrition Health Institute",
   },
 }

@@ -11,20 +11,33 @@
   "title": {
     "desktop": {
       "heading": "sức khỏe\nvà sinh sản",
-      "paragraph": "Best people, best products,\nbest opportunities"
+      "paragraph": "Best People     Best Products     Best Opportunities"
     },
     "mobile": {
       "heading": "sức khỏe\nvà sinh sản",
-      "paragraph": "Best people,\nbest products,\nbest opportunities"
+      "paragraph": "Best People    Best Products    Best Opportunities"
     }
   },
   "sections": {
     "about": {
       "id": "about",
       "title": "thông tin về chúng tôi",
+      "buttonOpen": "thêm về",
+      "buttonClose": "gần",
       "texts": [
         {
           "text": "Nutrition Health Institute – là công ty chuyên sâu về phát triển và sản xuất những dòng sản phẩm được chế tạo ra từ các nguyên dược liệu mới nhất, dành cho nữ và nam với ước mơ được làm bố, mẹ. Vô sinh dần trở thành nội dung chính của cuộc sống, mà rất khó để đối mặt và giải quyết. Nutrition Health Instutute sản xuất và phân phối sản phẩm chất lượng tốt nhất dành cho sức khỏe của nam và nữ, giúp cho những cặp đôi này hạnh phúc hơn. Công ty của chúng tôi gồm các chuyên gia giỏi hàng đầu Ba Lan - Tiến sĩ Tomasz Rokicki, tiễn sĩ Jan Karol Wolski và nhà tư vấn Adriana Grodzicka."
+        }
+      ],
+      "mobileTexts": [
+        {
+          "text": "Nutrition Health Institute – là công ty chuyên sâu về phát triển và sản xuất những dòng sản phẩm được chế tạo ra từ các nguyên dược liệu mới nhất, dành cho nữ và nam với ước mơ được làm bố, mẹ."
+        },
+        {
+          "text": "Vô sinh dần trở thành nội dung chính của cuộc sống, mà rất khó để đối mặt và giải quyết. Nutrition Health Instutute sản xuất và phân phối sản phẩm chất lượng tốt nhất dành cho sức khỏe của nam và nữ, giúp cho những cặp đôi này hạnh phúc hơn."
+        },
+        {
+          "text": "Công ty của chúng tôi gồm các chuyên gia giỏi hàng đầu Ba Lan - Tiến sĩ Tomasz Rokicki, tiễn sĩ Jan Karol Wolski và nhà tư vấn Adriana Grodzicka."
         }
       ]
     },
@@ -41,25 +54,31 @@
         {
           "id": 1,
           "name": "TENfertil ON",
-          "heading": "TENfertil ON",
+          "heading": "TENfertil® ON",
           "image": "../../images/png/tenfertil.png",
           "buttonMore": {
             "href": "https://tenfertil.pl",
-            "label": "thêm về TENfertil On"
-          },
-          "buttonBuy": {
-            "href": "https://tenfertil.pl/buy",
-            "label": "nơi để mua"
+            "label": "thêm về"
           },
           "texts": [
             {
               "text": "Thành phần của TENfertil ON và liều lượng sử dụng đã được phát triển trên cơ sở nhiều năm kinh nghiệm của các chuyên gia làm việc tại các phòng khám hàng đầu Ba Lan và điều trị vô sinh, dựa trên kiến thức y khoa mới nhất và hướng dẫn của các xã hội khoa học về sinh sản ở con người."
-            },
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "TENfertil ONA",
+          "heading": "TENfertil® ONA",
+          "image": "../../images/png/tenfertilONA.png",
+          "buttonMore": {
+            "href": "https://tenfertilona.pl",
+            "label": "thêm về"
+          },
+
+          "texts": [
             {
-              "text": "TENfertil ON có thể được sử dụng bởi những người đàn ông đang cố gắng để có con. Nó đặc biệt được khuyến khích cho những người đàn ông bị giảm số lượng tính trùng."
-            },
-            {
-              "text": "Thời gian sử dụng thực phẩm chức năng không được ít hơn 3 tháng. Nên dùng TENfertil ON trong suốt thời gian cố gắng có con và điều trị vô sinh."
+              "text": "Một trong những điều quan trọng nhất bạn cần làm khi chuẩn bị mang thai là bổ sung đủ lượng vitamin, vi chất dinh dưỡng và các chất cần thiết khác trước khi mang thai. TENfertil ONA là phương pháp bổ sung tốt nhất, dễ dàng và an toàn, đã được chứng minh bởi các bác sĩ chuyên khoa giỏi nhất."
             }
           ]
         }

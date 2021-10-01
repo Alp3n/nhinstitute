@@ -58,10 +58,10 @@ const AboutPersonGalleryMobile = ({ people }) => {
     <div>
       <StyledPersonGallery>
         <AboutPersonMobile
-          person={people.rokicki}
-          img={data.rokicki.childImageSharp.fluid}
-          handlePerson={handleRokicki}
-          selectedPerson={selectedPersonRokicki}
+          person={people.wolski}
+          img={data.wolski.childImageSharp.fluid}
+          handlePerson={handleWolski}
+          selectedPerson={selectedPersonWolski}
         />
         <AboutPersonMobile
           person={people.grodzicka}
@@ -70,10 +70,10 @@ const AboutPersonGalleryMobile = ({ people }) => {
           selectedPerson={selectedPersonGrodzicka}
         />
         <AboutPersonMobile
-          person={people.wolski}
-          img={data.wolski.childImageSharp.fluid}
-          handlePerson={handleWolski}
-          selectedPerson={selectedPersonWolski}
+          person={people.rokicki}
+          img={data.rokicki.childImageSharp.fluid}
+          handlePerson={handleRokicki}
+          selectedPerson={selectedPersonRokicki}
         />
       </StyledPersonGallery>
     </div>

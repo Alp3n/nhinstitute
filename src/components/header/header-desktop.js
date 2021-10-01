@@ -11,7 +11,7 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: #fcfcfc;
   z-index: 1000;
 `
 
@@ -20,7 +20,7 @@ const StyledBox = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 16px 15%;
+  margin: 32px 13%;
 
   @media only screen and (max-width: 1370px) {
     margin: 16px 8vw;

@@ -1,5 +1,5 @@
 import React from "react"
-import Section from "../section/section"
+import SectionMobile from "../section/section-mobile"
 import AboutPersonGalleryMobile from "../about/mobile/about-person-gallery-mobile"
 import GalleryMobile from "../gallery/gallery-mobile"
 import Product from "../product/product"
@@ -11,18 +11,18 @@ const HomeMobile = () => {
   return (
     <>
       <GalleryMobile title={t("title.desktop")} />
-      <Section
+      <SectionMobile
         id={t("sections.about.id")}
         title={t("sections.about.title")}
-        texts={t("sections.about.texts")}
+        texts={t("sections.about.mobileTexts")}
       >
         <AboutPersonGalleryMobile people={t("people")} more={t("more")} />
-      </Section>
-      <Section
+      </SectionMobile>
+      <SectionMobile
         id={t("sections.products.id")}
         title={t("sections.products.title")}
         texts={t("sections.products.texts")}
-        className="products"
+        className="products product"
       >
         {t("sections.products.items").map(item => (
           <Product
@@ -33,14 +33,14 @@ const HomeMobile = () => {
             soon={t("sections.products.soon")}
           />
         ))}
-      </Section>
-      <Section
+      </SectionMobile>
+      <SectionMobile
         id={t("sections.cooperation.id")}
         title={t("sections.cooperation.title")}
         texts={t("sections.cooperation.texts")}
       >
         <ContactForm form={t("form")} />
-      </Section>
+      </SectionMobile>
     </>
   )
 }

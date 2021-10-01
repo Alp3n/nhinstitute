@@ -6,16 +6,18 @@ import LogoNhi from "../logo/logo-nhi"
 
 const StyledFooterWrapper = styled.footer`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 3rem 0;
-  background-color: #f8f8f8;
+  background-color: #e0e8f7;
+  /* margin-top: 8rem; */
 `
 
 const StyledContent = styled.div`
-  width: 70%;
+  /* padding-left: 8%; */
+  width: 55%;
+  /* align-self: flex-end; */
 `
 const StyledInfoWrapper = styled.div`
   display: flex;
@@ -31,39 +33,50 @@ const StyledContactText = styled.div`
   align-items: center;
 `
 const StyledText = styled.p`
+  font-size: 1.2rem;
   padding-left: 1rem;
-  margin: 0;
+  margin: 0.5rem;
+`
+
+const StyledRow = styled.div`
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
 `
 
 const FooterDesktop = ({ number, email, company, copyrights }) => {
   return (
-    <StyledFooterWrapper id="footer">
-      <StyledContent>
-        <LogoNhi width="400px" />
-        <StyledInfoWrapper>
-          <StyledContactWrapper>
-            <StyledContactText>
-              <CgSmartphone color={myTheme.color["blue-4"]} size="24px" />
-              <StyledText size={myTheme.typography["text-p"]}>
-                {number}
-              </StyledText>
-            </StyledContactText>
-            <StyledContactText>
-              <CgMail color={myTheme.color["blue-4"]} size="24px" />
-              <StyledText size={myTheme.typography["text-p"]}>
-                {email}
-              </StyledText>
-            </StyledContactText>
-          </StyledContactWrapper>
-          <StyledText size={myTheme.typography["text-p3"]}>
-            {company}
-          </StyledText>
-        </StyledInfoWrapper>
-        <p>
-          &copy; {new Date().getFullYear()} {copyrights}
-        </p>
-      </StyledContent>
-    </StyledFooterWrapper>
+    <>
+      <StyledFooterWrapper id="footer">
+        <div style={{ width: "40%", marginRight: "8%" }}></div>
+        <StyledContent>
+          <LogoNhi width="400px" />
+          <StyledInfoWrapper>
+            <StyledContactWrapper>
+              <StyledContactText>
+                <CgSmartphone color={myTheme.color["blue-4"]} size="24px" />
+                <StyledText size={myTheme.typography["text-p"]}>
+                  {number}
+                </StyledText>
+              </StyledContactText>
+              <StyledContactText>
+                <CgMail color={myTheme.color["blue-4"]} size="24px" />
+                <StyledText size={myTheme.typography["text-p"]}>
+                  {email}
+                </StyledText>
+              </StyledContactText>
+            </StyledContactWrapper>
+          </StyledInfoWrapper>
+          <p>
+            &copy; {new Date().getFullYear()} {copyrights}
+          </p>
+        </StyledContent>
+      </StyledFooterWrapper>
+      <StyledRow>
+        <div style={{ width: "40%", marginRight: "7%" }}></div>
+        <p size={myTheme.typography["text-p3"]}>{company}</p>
+      </StyledRow>
+    </>
   )
 }
 export default FooterDesktop

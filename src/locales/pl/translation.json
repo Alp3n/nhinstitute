@@ -11,20 +11,33 @@
   "title": {
     "desktop": {
       "heading": "zdrowie\ni płodność",
-      "paragraph": "Best people, best products,\nbest opportunities"
+      "paragraph": "Best People     Best Products     Best Opportunities"
     },
     "mobile": {
       "heading": "zdrowie\ni płodność",
-      "paragraph": "Best people,\nbest products,\nbest opportunities"
+      "paragraph": "Best people best products best opportunities"
     }
   },
   "sections": {
     "about": {
       "id": "about",
       "title": "o nas",
+      "buttonOpen": "więcej",
+      "buttonClose": "zwiń",
       "texts": [
         {
-          "text": "Nutrition Health Institute – to firma, która koncentruje się na opracowywaniu i wytwarzaniu najnowszej generacji wieloskładnikowych preparatów farmaceutycznych zarówno dla kobiet jak i dla mężczyzn, którzy pragną spełnić największe swoje marzenie – zostać szczęśliwymi rodzicami. Zdiagnozowana niepłodność bardzo często staje się treścią życia, z którą trudno się pogodzić i uporać. NHI wytwarza i sprzedaje innowacyjne i najlepsze w swojej klasie produkty w obszarze zdrowia kobiet i mężczyzn, których zadaniem jest uszczęśliwienie takich par. Nasz zespół to najlepsi specjaliści - Dr n. med. Tomasz Rokicki, Dr Jan Karol Wolski i Adriana Grodzicka."
+          "text": "Nutrition Health Institute – to firma, która koncentruje się na opracowywaniu i wytwarzaniu najnowszej generacji wieloskładnikowych preparatów farmaceutycznych zarówno dla kobiet jak i dla mężczyzn, którzy pragną spełnić największe swoje marzenie – zostać szczęśliwymi rodzicami.\nZdiagnozowana niepłodność bardzo często staje się treścią życia, z którą trudno się pogodzić i uporać. NHI wytwarza i sprzedaje innowacyjne i najlepsze w swojej klasie produkty w obszarze zdrowia kobiet i mężczyzn, których zadaniem jest uszczęśliwienie takich par.\nNasz zespół to najlepsi specjaliści - Dr n. med. Tomasz Rokicki, Dr Jan Karol Wolski i Adriana Grodzicka."
+        }
+      ],
+      "mobileTexts": [
+        {
+          "text": "Nutrition Health Institute – to firma, która koncentruje się na opracowywaniu i wytwarzaniu najnowszej generacji wieloskładnikowych preparatów farmaceutycznych zarówno dla kobiet jak i dla mężczyzn, którzy pragną spełnić największe swoje marzenie – zostać szczęśliwymi rodzicami."
+        },
+        {
+          "text": "Zdiagnozowana niepłodność bardzo często staje się treścią życia, z którą trudno się pogodzić i uporać. NHI wytwarza i sprzedaje innowacyjne i najlepsze w swojej klasie produkty w obszarze zdrowia kobiet i mężczyzn, których zadaniem jest uszczęśliwienie takich par."
+        },
+        {
+          "text": "Nasz zespół to najlepsi specjaliści - Dr n. med. Tomasz Rokicki, Dr Jan Karol Wolski i Adriana Grodzicka."
         }
       ]
     },
@@ -33,33 +46,41 @@
       "title": "produkty",
       "texts": [
         {
-          "text": "Nasze preparaty zostały opracowane na podstawie wieloletnich badań prowadzonych przez wybitnych polskich specjalistów pracujących w najlepszych klinikach zajmujących się leczeniem niepłodności przy współpracy ze środowiskiem akademickim, pracownikami służby zdrowia oraz pacjentami. Nasze suplementy spełniają najwyższe standardy jakościowe, są bezpieczne, a ich głównym zadaniem jest pomaganie pacjentom starającym się o potomstwo w spełnieniu ich pragnienia."
+          "text": "Nasze preparaty zostały opracowane na podstawie wieloletnich badań prowadzonych przez wybitnych polskich specjalistów pracujących w najlepszych klinikach zajmujących się leczeniem niepłodności przy współpracy ze środowiskiem akademickim, pracownikami służby zdrowia oraz pacjentami. Nasze suplementy spełniają najwyższe standardy jakościowe, są bezpieczne, a ich głównym zadaniem jest pomaganie pacjentom starającym się o potomstwo w spełnieniu ich pragnienia.\nWkrótce będą dostępne na rynku TenHair i Witaminy dla kobiet w ciąży"
         }
       ],
+
       "soon": "Wkrótce będę dostępne na rynku Polskim TENfertil ONA i TENhair.",
       "items": [
         {
           "id": 1,
           "name": "TENfertil ON",
-          "heading": "TENfertil ON",
-          "image": "../../images/png/tenfertil.png",
+          "heading": "TENfertil® ON",
+          "image": "../../images/png/tenfertilON.png",
           "buttonMore": {
             "href": "https://tenfertil.pl",
-            "label": "więcej o tenfertil on"
+            "label": "więcej"
           },
-          "buttonBuy": {
-            "href": "https://tenfertil.pl/buy",
-            "label": "gdzie kupić"
-          },
+
           "texts": [
             {
               "text": "Skład TENfertil ON oraz dawki przyjmowania zostały opracowane na podstawie wieloletnich doświadczeń specjalistów, pracujących w wiodących polskich klinikach i zajmujących się leczeniem niepłodności, w oparciu o najnowszą wiedzę medyczną i wytyczne towarzystw naukowych zajmujących się rozrodem człowieka."
-            },
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "TENfertil ONA",
+          "heading": "TENfertil® ONA",
+          "image": "../../images/png/tenfertilONA.png",
+          "buttonMore": {
+            "href": "https://tenfertilona.pl",
+            "label": "więcej"
+          },
+
+          "texts": [
             {
-              "text": "Preparat TENfertil ON może być stosowany przez mężczyzn starających się o dzieci. Szczególnie zalecany jest dla panów, u których stwierdzono obniżenie parametrów nasienia."
-            },
-            {
-              "text": "Czas stosowania preparatu nie powinien być krótszy niż 3 miesiące. Zaleca się przyjmowanie TENfertil ON przez cały okres starania się o potomstwo i leczenia niepłodności."
+              "text": "Jedną z najważniejszych rzeczy, o które musisz zadbać, przygotouwując się do ciąży jest dostarczenie odpowiedniej ilości witamin, mikroelementów i innych niezbędnych substancji na długo przed zajściem w ciążę. TENfertil ONA to najlepszy sposób suplematacjii, latwy i bezpieczny, sprawdzony przez najlepszych specjalistów."
             }
           ]
         }
@@ -70,21 +91,18 @@
       "title": "współpraca",
       "texts": [
         {
-          "text": "Przedstawiciele zawodów medycznych, jako najważniejsze osoby mające kontakt z pacjentami, posiadają nieocenioną wiedzę specjalistyczną na temat wyników leczenia pacjentów i sposobów walki z chorobami. Odgrywa to kluczową rolę w podniesienie poziomu opieki nad pacjentami, rozwoju terapii oraz poprawę wyników leczenia."
-        },
-        {
-          "text": "Współpraca w chwili obecnej opiera się na Badaniach klinicznych. Lekarze prowadzący leczenie i inni przedstawiciele zawodów medycznych realizują badania kliniczne w ośrodkach badawczych zgodnie z protokołami badań klinicznych zatwierdzonymi przez organy ochrony zdrowia i niezależne komisje bioetyczne."
+          "text": "Przedstawiciele zawodów medycznych, jako najważniejsze osoby mające kontakt z pacjentami, posiadają nieocenioną wiedzę specjalistyczną na temat wyników leczenia pacjentów i sposobów walki z chorobami. Odgrywa to kluczową rolę w podniesienie poziomu opieki nad pacjentami, rozwoju terapii oraz poprawę wyników leczenia.\nWspółpraca w chwili obecnej opiera się na Badaniach klinicznych. Lekarze prowadzący leczenie i inni przedstawiciele zawodów medycznych realizują badania kliniczne w ośrodkach badawczych zgodnie z protokołami badań klinicznych zatwierdzonymi przez organy ochrony zdrowia i niezależne komisje bioetyczne."
         }
       ]
     }
   },
   "form": {
     "formURL": "",
-    "title": "Wypełnij formularz, żeby wziąć udział",
+    "title": "Wypełnij formularz, żeby wziąć udział:",
     "placeholders": {
-      "fullName": "Imię i nazwisko",
-      "email": "E-mail",
-      "phoneNumber": "Numer telefonu"
+      "fullName": "Wpisz Imię i Nazwisko",
+      "email": "adres E-mail",
+      "phoneNumber": "Numer Telefonu"
     },
     "buttonSendPL": "wyślij",
     "agreement": "Wyrażam zgodę na wykorzystanie i przetwarzanie moich danych osobowych w celu realizacji zamówienia oraz kontaktu ze mną, wraz z przepisami rozporządzenia RODO o ochronie danych osobowych. Oświadczam, że zostałam(em) poinformowana(y) o przysługującym mi prawie dostępu do treści moich danych osobowych ich poprawiania oraz żądania usunięcia, jak również prawa do wycofania zgody w każdym czasie."
@@ -94,7 +112,7 @@
     "logo": "url",
     "number": "+48 666 368 005",
     "email": "info@nhinstitute.pl",
-    "company": "Nutrition Health Institute Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska\nKRS: 0000861627\nREGON: 38710727\nNIP: 9512507706",
+    "company": "Sp. z o.o. Białozora 9, 02-817 Warszawa, Polska KRS: 0000861627. REGON: 38710727. NIP: 9512507706. halooo",
     "copyrights": "Nutrition Health Institute"
   },
   "people": {

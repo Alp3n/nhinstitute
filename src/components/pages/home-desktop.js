@@ -1,49 +1,59 @@
-import React from "react"
-import GalleryDesktop from "../gallery/gallery-desktop"
-import ScrollArrow from "../scroll-arrow"
+import React, { useState } from "react"
+// import GalleryDesktop from "../gallery/gallery-desktop"
 import Section from "../section/section"
-import AboutPersonGallery from "../about/desktop/about-person-gallery"
+// import AboutPersonGallery from "../about/desktop/about-person-gallery"
 import Product from "../product/product"
-import Contact from "../contact/Contact"
 import { useTranslation } from "react-i18next"
+import styled from "styled-components"
+import ContactForm from "../contact/contact-form"
 
 const HomeDesktop = () => {
+  const [isMore, setIsMore] = useState(false)
   const { t } = useTranslation()
   return (
     <>
-      <GalleryDesktop title={t("title.desktop")} />
-      <ScrollArrow href={"#about"} direction={"-45deg"} />
       <Section
         id={t("sections.about.id")}
         title={t("sections.about.title")}
         texts={t("sections.about.texts")}
-      >
-        <AboutPersonGallery people={t("people")} more={t("more")} />
-      </Section>
+        button
+        setIsMore={setIsMore}
+        isMore={isMore}
+        buttonTextOpen={t("sections.about.buttonOpen")}
+        buttonTextClose={t("sections.about.buttonClose")}
+        people={t("people")}
+        more={t("more")}
+      ></Section>
+
       <Section
         id={t("sections.products.id")}
         title={t("sections.products.title")}
         texts={t("sections.products.texts")}
-      >
+        products={t("sections.products.items")}
+      ></Section>
+      {/* <StyledWrapper>
         {t("sections.products.items").map(item => (
-          <Product
-            key={item.id}
-            item={item}
-            width={`25vw`}
-            height={`25vw`}
-            soon={t("sections.products.soon")}
-          />
+          <Product key={item.id} item={item} width={`22vw`} height={`20vw`} />
         ))}
-      </Section>
+      </StyledWrapper> */}
       <Section
         id={t("sections.cooperation.id")}
         title={t("sections.cooperation.title")}
         texts={t("sections.cooperation.texts")}
       >
-        <Contact form={t("form")} />
+        <div style={{ alignContent: "flex-end" }}>
+          <ContactForm form={t("form")} />
+        </div>
       </Section>
     </>
   )
 }
 
 export default HomeDesktop
+
+const StyledWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 40% 40%;
+  gap: 5%;
+  margin: 2% 0;
+`

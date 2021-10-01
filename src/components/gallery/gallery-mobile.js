@@ -7,40 +7,30 @@ import GalleryImage from "./galleryImage"
 const StyledGallerySmall = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 1fr);
-  grid-template-rows: repeat(auto-fill, 1fr);
-  grid-gap: 0.5rem;
-  grid-template-areas:
-    "img1 img1 img1"
-    "img2 img2 img3"
-    "img4 img5 img6";
+  grid-template-rows: repeat(auto-fill, 60vw);
+  /* grid-gap: 2px; */
+  grid-template-areas: "dad mom";
 
-  .title {
-    grid-area: img1;
+  .mom {
+    grid-area: mom;
   }
-  .mama {
-    grid-area: img2;
-  }
-  .molecules {
-    grid-area: img3;
-  }
-  .water {
-    grid-area: img4;
-  }
-  .doctor {
-    grid-area: img5;
-  }
-  .probes {
-    grid-area: img6;
+  .dad {
+    grid-area: dad;
   }
 `
-const StyledHeading = styled.h1`
-  font-weight: 300;
+const StyledHeading = styled.p`
+  /* font-weight: 700; */
   font-size: 42px;
   text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  line-height: 54px;
+  margin: 0 0 12px 0;
 `
 
 const StyledP = styled.p`
-  font-size: 18px;
+  font-size: 12px;
+  text-transform: uppercase;
 `
 
 const StyledWrapper = styled.div`
@@ -51,19 +41,29 @@ const StyledWrapper = styled.div`
   margin-top: 16px;
 `
 
+const StyledGalleryWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3%;
+`
+
 const GalleryMobile = ({ title }) => {
   const data = useStaticQuery(graphql`
     query ImagesGalleryMobile {
-      imagesSmall: allFile(
-        filter: { relativeDirectory: { eq: "jpg" } }
-        sort: { fields: name }
-        limit: 5
-      ) {
+      dad: allFile(filter: { name: { eq: "dad" } }, limit: 1) {
         nodes {
-          id
-          name
           childImageSharp {
-            fluid(quality: 60) {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      mom: allFile(filter: { name: { eq: "mom" } }, limit: 1) {
+        nodes {
+          childImageSharp {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -73,19 +73,22 @@ const GalleryMobile = ({ title }) => {
   `)
 
   return (
-    <StyledGallerySmall>
+    <StyledGalleryWrapper>
       <StyledWrapper className="title">
         <StyledHeading>{title.heading}</StyledHeading>
         <StyledP>{title.paragraph}</StyledP>
       </StyledWrapper>
-      {data.imagesSmall.nodes.map(image => (
+      <StyledGallerySmall>
         <GalleryImage
-          key={image.id}
-          image={image.childImageSharp.fluid}
-          area={image.name}
+          image={data.dad.nodes[0].childImageSharp.fluid}
+          area="dad"
         />
-      ))}
-    </StyledGallerySmall>
+        <GalleryImage
+          image={data.mom.nodes[0].childImageSharp.fluid}
+          area="mom"
+        />
+      </StyledGallerySmall>
+    </StyledGalleryWrapper>
   )
 }
 

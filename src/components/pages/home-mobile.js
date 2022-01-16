@@ -16,7 +16,7 @@ const HomeMobile = () => {
         title={t("sections.about.title")}
         texts={t("sections.about.mobileTexts")}
       >
-        <AboutPersonGalleryMobile people={t("people")} more={t("more")} />
+        {/* <AboutPersonGalleryMobile people={t("people")} more={t("more")} /> */}
       </SectionMobile>
       <SectionMobile
         id={t("sections.products.id")}

@@ -90,7 +90,7 @@ const StyledProductsWrapper = styled.div`
   margin: 2% 0;
 `
 const StyledMargin = styled.div`
-  margin: 6% 0 10% 0;
+  margin: ${props => (props.more ? "7% 0 -3% 0" : "6% 0 10% 0")};
 `
 
 const Section = ({
@@ -109,7 +109,7 @@ const Section = ({
   products,
 }) => {
   return (
-    <StyledMargin>
+    <StyledMargin more={more}>
       <StyledSection id={id} className={(className, "anchor")}>
         <StyledLeft>
           <StyledHeading>{title}</StyledHeading>
@@ -118,12 +118,12 @@ const Section = ({
           {texts.map((text, index) => (
             <StyledP key={index}>{text.text}</StyledP>
           ))}
-          {isMore ? null : button ? (
+          {/* {isMore ? null : button ? (
             <StyledButton onClick={() => setIsMore(!isMore)}>
               {buttonTextOpen}
               <CgChevronDown size="30px" />
             </StyledButton>
-          ) : null}
+          ) : null} */}
           {children}
         </StyledRight>
       </StyledSection>
@@ -140,7 +140,7 @@ const Section = ({
             ))
           : null}
       </StyledProductsWrapper>
-      {isMore ? (
+      {/* {isMore ? (
         <>
           <AboutPersonGallery
             people={people}
@@ -157,7 +157,7 @@ const Section = ({
             </StyledRight>
           </StyledButtonWrapper>
         </>
-      ) : null}
+      ) : null} */}
     </StyledMargin>
   )
 }

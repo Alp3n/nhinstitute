@@ -31,11 +31,6 @@ const HomeDesktop = () => {
         texts={t("sections.products.texts")}
         products={t("sections.products.items")}
       ></Section>
-      {/* <StyledWrapper>
-        {t("sections.products.items").map(item => (
-          <Product key={item.id} item={item} width={`22vw`} height={`20vw`} />
-        ))}
-      </StyledWrapper> */}
       <Section
         id={t("sections.cooperation.id")}
         title={t("sections.cooperation.title")}

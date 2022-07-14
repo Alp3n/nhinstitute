@@ -1,6 +1,6 @@
 import React from "react"
 import SectionMobile from "../section/section-mobile"
-import AboutPersonGalleryMobile from "../about/mobile/about-person-gallery-mobile"
+
 import GalleryMobile from "../gallery/gallery-mobile"
 import Product from "../product/product"
 import ContactForm from "../contact/contact-form"
@@ -15,9 +15,7 @@ const HomeMobile = () => {
         id={t("sections.about.id")}
         title={t("sections.about.title")}
         texts={t("sections.about.mobileTexts")}
-      >
-        {/* <AboutPersonGalleryMobile people={t("people")} more={t("more")} /> */}
-      </SectionMobile>
+      ></SectionMobile>
       <SectionMobile
         id={t("sections.products.id")}
         title={t("sections.products.title")}

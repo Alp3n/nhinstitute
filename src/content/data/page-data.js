@@ -56,7 +56,7 @@ export const pageData = {
       texts: [
         {
           text:
-            "Nutrition Health Institute – to firma, która koncentruje się na opracowywaniu i wytwarzaniu najnowszej generacji wieloskładnikowych preparatów farmaceutycznych zarówno dla kobiet jak i dla mężczyzn, którzy pragną spełnić największe swoje marzenie – zostać szczęśliwymi rodzicami. Zdiagnozowana niepłodność bardzo często staje się treścią życia, z którą trudno się pogodzić i uporać. NHI wytwarza i sprzedaje innowacyjne i najlepsze w swojej klasie produkty w obszarze zdrowia kobiet i mężczyzn, których zadaniem jest uszczęśliwienie takich par. Nasz zespól to najlepsze specjaliści - Dr n. med. Tomasz Rokicki, Jan Karol Wolski i Adriana Grodzicka.",
+            "Nutrition Health Institute – to firma, która koncentruje się na opracowywaniu i wytwarzaniu najnowszej generacji wieloskładnikowych preparatów farmaceutycznych zarówno dla kobiet jak i dla mężczyzn, którzy pragną spełnić największe swoje marzenie – zostać szczęśliwymi rodzicami. Zdiagnozowana niepłodność bardzo często staje się treścią życia, z którą trudno się pogodzić i uporać. NHI wytwarza i sprzedaje innowacyjne i najlepsze w swojej klasie produkty w obszarze zdrowia kobiet i mężczyzn, których zadaniem jest uszczęśliwienie takich par.",
         },
       ],
     },

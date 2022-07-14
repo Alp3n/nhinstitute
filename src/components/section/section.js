@@ -1,14 +1,10 @@
 import React from "react"
-import { CgChevronDown, CgChevronUp } from "react-icons/cg"
 import styled from "styled-components"
-import myTheme from "../../styles/my-theme"
-import AboutPersonGallery from "../about/desktop/about-person-gallery"
 import Product from "../product/product"
 
 const StyledSection = styled.section`
   display: flex;
   width: 100%;
-  /* margin: 6% 0 10% 0; */
   line-height: 40px;
 
   &p:first-child {
@@ -33,12 +29,6 @@ const StyledHeading = styled.p`
   font-size: 36px;
   font-weight: 500;
   font-family: "Oswald", sans-serif;
-
-  /* @media only screen and (max-width: 700px) {
-    font-size: 36px;
-    font-weight: 500;
-    font-family: "Oswald", sans-serif;
-  } */
 `
 const StyledP = styled.p`
   font-size: 24px;
@@ -58,30 +48,6 @@ const StyledRight = styled.div`
   width: 55%;
 `
 
-const StyledButton = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35%;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  background-color: ${myTheme.color.button};
-  padding: 6px;
-  text-transform: uppercase;
-
-  &:hover {
-    background-color: ${myTheme.color["button-hover"]};
-    cursor: pointer;
-  }
-`
-
-const StyledButtonWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  line-height: 40px;
-`
 const StyledProductsWrapper = styled.div`
   display: grid;
   grid-auto-flow: row;
@@ -93,21 +59,7 @@ const StyledMargin = styled.div`
   margin: ${props => (props.more ? "7% 0 -3% 0" : "6% 0 10% 0")};
 `
 
-const Section = ({
-  id,
-  children,
-  texts,
-  title,
-  className,
-  button,
-  buttonTextOpen,
-  buttonTextClose,
-  isMore,
-  setIsMore,
-  people,
-  more,
-  products,
-}) => {
+const Section = ({ id, children, texts, title, className, more, products }) => {
   return (
     <StyledMargin more={more}>
       <StyledSection id={id} className={(className, "anchor")}>
@@ -118,12 +70,7 @@ const Section = ({
           {texts.map((text, index) => (
             <StyledP key={index}>{text.text}</StyledP>
           ))}
-          {/* {isMore ? null : button ? (
-            <StyledButton onClick={() => setIsMore(!isMore)}>
-              {buttonTextOpen}
-              <CgChevronDown size="30px" />
-            </StyledButton>
-          ) : null} */}
+
           {children}
         </StyledRight>
       </StyledSection>
@@ -140,24 +87,6 @@ const Section = ({
             ))
           : null}
       </StyledProductsWrapper>
-      {/* {isMore ? (
-        <>
-          <AboutPersonGallery
-            people={people}
-            more={more}
-            setIsMore={setIsMore}
-          />
-          <StyledButtonWrapper>
-            <StyledLeft />
-            <StyledRight>
-              <StyledButton onClick={() => setIsMore(!isMore)}>
-                {buttonTextClose}
-                <CgChevronUp size="30px" />
-              </StyledButton>
-            </StyledRight>
-          </StyledButtonWrapper>
-        </>
-      ) : null} */}
     </StyledMargin>
   )
 }

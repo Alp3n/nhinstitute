@@ -1,10 +1,6 @@
 import React, { useState } from "react"
-// import GalleryDesktop from "../gallery/gallery-desktop"
 import Section from "../section/section"
-// import AboutPersonGallery from "../about/desktop/about-person-gallery"
-import Product from "../product/product"
 import { useTranslation } from "react-i18next"
-import styled from "styled-components"
 import ContactForm from "../contact/contact-form"
 
 const HomeDesktop = () => {
@@ -45,10 +41,3 @@ const HomeDesktop = () => {
 }
 
 export default HomeDesktop
-
-const StyledWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 40% 40%;
-  gap: 5%;
-  margin: 2% 0;
-`

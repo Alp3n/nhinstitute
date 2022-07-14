@@ -58,7 +58,7 @@ export const pageDataEn = {
       texts: [
         {
           text:
-            "Nutrition Health Institute – company that concentrates on developing and manufacturing the newest generation multi-component pharmaceutical products, both for men and women that would like to fulfill their biggest dream – become happy parents. Diagnosed infertility very often becomes the main focus of life that is hard to accept and deal with. Nutrition Health Institute manufactures and sells innovative and the best in its class products in an area of men's and women’s health, with the task of making such couples happy. Our team are the best specialists - Dr Tomasz Rokicki, Dr Jan Karol Wolski and Adriana Grodzicka.",
+            "Nutrition Health Institute – company that concentrates on developing and manufacturing the newest generation multi-component pharmaceutical products, both for men and women that would like to fulfill their biggest dream – become happy parents. Diagnosed infertility very often becomes the main focus of life that is hard to accept and deal with. Nutrition Health Institute manufactures and sells innovative and the best in its class products in an area of men's and women’s health, with the task of making such couples happy.",
         },
       ],
     },
